@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../prettify.css" />
+  <!-- Import Vue 3 -->
+  <script src="../vue.global.prod.js"></script>
+  <!-- Import component library -->
+  <script src="../index.full.min.js"></script>
+  <script src="../prettify.js"></script>
+  <meta charset="UTF-8">
+  <title>Coverage</title>
+</head>
+
+<body>
+  <div id="app" class="common-layout">
+    <el-container>
+      <el-header>
+        <el-row :gutter="10">
+          <el-col :span="5">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <el-link type="primary" :href="relativeHome">
+                    <h2>&lt;</h2>
+                  </el-link>
+                </el-text></div>
+              <div><el-text class="mx-1 "><h2>{{title}}</h2></el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info"></el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.functions.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Functions</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.functions.covered}}/{{file.summary.functions.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.branches.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Branches</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.branches.covered}}/{{file.summary.branches.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.lines.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Lines</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.lines.covered}}/{{file.summary.lines.total}}</el-text></div>
+            </el-space>
+          </el-col>
+        </el-row>
+        <el-divider />
+      </el-header>
+      <el-main>
+        <el-row>
+        </el-row>
+        <pre>
+          <table class="coverage">
+            <tr>
+              <td class="line-count quiet">
+                <pre class="prettyprint lang-js">
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+                </pre>
+        </td>
+        <td class="text">
+          <pre class="prettyprint linenums lang-js">
+/** 
+ * CaseViewModel.ets 
+ * M5 状态编排层：无装饰器纯 ArkTS 类，持有唯一权威状态 GameState（SSOT）。 
+ * 零系统依赖，通过构造函数注入 repo / engine / clock / idGen， 
+ * 因此 Local Unit Test 可在无 ArkUI、无 Kit 运行时完整驱动。 
+ * 
+ * 所有写状态路径「同步改内存 + await 串行落盘」，保证杀进程不丢最后一次操作。 
+ */ 
+ 
+import { 
+  Availability, Choice, ChoiceResult, Ending, EventNode, GameState, Hypothesis, 
+  Progress, Verdict, SCENE_IDS, contains, cloneGameState, cloneHypothesis, createNewCase 
+} from &#39;../model/Models&#39;; 
+import { CaseEngine } from &#39;../engine/CaseEngine&#39;; 
+import { IStateRepository } from &#39;../repository/IStateRepository&#39;; 
+ 
+export class CaseViewModel { 
+  private state: GameState = createNewCase(0); 
+  private repo: IStateRepository; 
+  private engine: CaseEngine; 
+  private clock: () =&gt; number; 
+  private idGen: () =&gt; string; 
+  private pendingSave: Promise&lt;void&gt; = Promise.resolve(); 
+  private restoreFallback: boolean = false; 
+ 
+  constructor(repo: IStateRepository, engine: CaseEngine, clock: () =&gt; number, idGen: () =&gt; string) { 
+    this.repo = repo; 
+    this.engine = engine; 
+    this.clock = clock; 
+    this.idGen = idGen; 
+  } 
+ 
+  /** 冷启动恢复：await 读档 → 判定是否回落 → await 落盘。必须在渲染业务页前完成。 */ 
+  async restore(): Promise&lt;void&gt; { 
+    const loaded: GameState = await this.repo.load(); 
+    const backup: string = await this.repo.readBackup(); 
+    this.restoreFallback = backup.length &gt; 0; 
+    this.state = cloneGameState(loaded); 
+    await this.persistNow(); 
+  } 
+ 
+  didRestoreFallback(): boolean { 
+    return this.restoreFallback; 
+  } 
+ 
+  /** 返回状态副本，UI 用新对象引用整体赋值给 @State，触发 ArkUI V1 重绘。 */ 
+  getState(): GameState { 
+    return cloneGameState(this.state); 
+  } 
+ 
+  getProgress(): Progress { 
+    return this.engine.getProgress(this.state); 
+  } 
+ 
+  getAvailability(event: EventNode): Availability { 
+    return this.engine.checkAvailability(this.state, event); 
+  } 
+ 
+  getBody(event: EventNode): string { 
+    return this.engine.resolveBody(this.state, event); 
+  } 
+ 
+  getChoices(event: EventNode): Choice[] { 
+    return this.engine.availableChoices(this.state, event); 
+  } 
+ 
+  getSceneEvents(sceneId: string): EventNode[] { 
+    return this.engine.sceneEvents(this.state, sceneId); 
+  } 
+ 
+  getVerdict(hypothesis: Hypothesis): Verdict { 
+    return this.engine.validateHypothesis(this.state, hypothesis); 
+  } 
+ 
+  getEnding(): Ending | null { 
+    if (this.state.endingId.length === 0) { 
+      return null; 
+    } 
+    return this.findEndingById(this.state.endingId); 
+  } 
+ 
+  private findEndingById(id: string): Ending | null { 
+    const all: Ending[] = this.engine.listEndings(); 
+    for (let i = 0; i &lt; all.length; i++) { 
+      if (all[i].id === id) { 
+        return all[i]; 
+      } 
+    } 
+    return null; 
+  } 
+ 
+  /** 一次选择：纯引擎计算 → 更新 SSOT → await 落盘 → 把结果交给 UI 做动画与 Toast。 */ 
+  async choose(eventId: string, choiceId: string): Promise&lt;ChoiceResult&gt; { 
+    const result: ChoiceResult = this.engine.applyChoice( 
+      this.state, eventId, choiceId, this.clock(), this.idGen()); 
+    if (!result.accepted) { 
+      return result; 
+    } 
+    this.state = result.state; 
+    await this.persistNow(); 
+    return result; 
+  } 
+ 
+  async selectScene(sceneId: string): Promise&lt;void&gt; { 
+    if (!contains(SCENE_IDS, sceneId)) { 
+      return; 
+    } 
+    const next: GameState = cloneGameState(this.state); 
+    next.currentSceneId = sceneId; 
+    next.updatedAt = this.clock(); 
+    this.state = next; 
+    await this.persistNow(); 
+  } 
+ 
+  /** 推理台每次调整断言即保存，杀进程恢复后选择仍在。 */ 
+  async setHypothesis(hypothesis: Hypothesis): Promise&lt;void&gt; { 
+    const next: GameState = cloneGameState(this.state); 
+    next.hypothesis = cloneHypothesis(hypothesis); 
+    next.updatedAt = this.clock(); 
+    this.state = next; 
+    await this.persistNow(); 
+  } 
+ 
+  /** 提交最终判断：按固定优先级得到唯一结局并落盘。 */ 
+  async submitVerdict(hypothesis: Hypothesis): Promise&lt;Ending&gt; { 
+    const ending: Ending = this.engine.resolveEnding(this.state, hypothesis); 
+    const next: GameState = cloneGameState(this.state); 
+    next.hypothesis = cloneHypothesis(hypothesis); 
+    next.endingId = ending.id; 
+    next.updatedAt = this.clock(); 
+    this.state = next; 
+    await this.persistNow(); 
+    return ending; 
+  } 
+ 
+  /** 重新开局：清空全部线索、flag、日志与结局，并立即写盘。 */ 
+  async restartCase(): Promise&lt;void&gt; { 
+    this.state = this.engine.createFreshCase(this.clock()); 
+    await this.persistNow(); 
+  } 
+ 
+  /** onBackground 兜底：等待串行写盘链收尾。 */ 
+  async flush(): Promise&lt;void&gt; { 
+    await this.pendingSave; 
+  } 
+ 
+  private enqueuePersist(): void { 
+    const snapshot: GameState = cloneGameState(this.state); 
+    this.pendingSave = this.pendingSave 
+      .then((): Promise&lt;void&gt; =&gt; this.repo.save(snapshot)) 
+      .catch((): void =&gt; { 
+      }); 
+  } 
+ 
+  private async persistNow(): Promise&lt;void&gt; { 
+    this.enqueuePersist(); 
+    await this.pendingSave; 
+  } 
+} 
+
+              </pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
+      </el-main>
+      <el-footer align="middle" class="footer">
+        Code coverage generated by <el-link href="https://github.com/SMAT-Lab/bjc" type="primary"
+          target="_blank">bjc</el-link> at {{date}}
+      </el-footer>
+    </el-container>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {"date":"Sun Nov 15 2026 12:31:47 GMT+0800 (China Standard Time)","file":{"version":"bjc v1.0.0","versionCode":10000,"path":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles/entry/src/main/ets/viewmodel/CaseViewModel.ets","hash":"261f16af52219d280b1e0159c3d3289c16a96c91dc6865c79f7e8d18d413f128","lineCnt":160,"count":0,"projectPath":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles","projectPathHash":"7e62e222253fa57eef9057adbbabd5292338b5f8a05fc98ff006f1c6dabd13cf","functions":[{"name":"anonymous_0","count":0,"regions":[{"startLoc":{"line":21,"col":18},"endLoc":{"line":21,"col":30},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":0},{"name":"anonymous_1","count":0,"regions":[{"startLoc":{"line":22,"col":18},"endLoc":{"line":22,"col":30},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":1},{"name":"CaseViewModel.constructor","count":0,"regions":[{"startLoc":{"line":26,"col":3},"endLoc":{"line":31,"col":4},"count":0,"ignored":0},{"startLoc":{"line":27,"col":5},"endLoc":{"line":31,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":2},{"name":"anonymous_2","count":0,"regions":[{"startLoc":{"line":26,"col":66},"endLoc":{"line":26,"col":78},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":3},{"name":"anonymous_3","count":0,"regions":[{"startLoc":{"line":26,"col":87},"endLoc":{"line":26,"col":99},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":4},{"name":"CaseViewModel.restore","count":0,"regions":[{"startLoc":{"line":34,"col":3},"endLoc":{"line":40,"col":4},"count":0,"ignored":0},{"startLoc":{"line":35,"col":5},"endLoc":{"line":40,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":5},{"name":"CaseViewModel.didRestoreFallback","count":0,"regions":[{"startLoc":{"line":42,"col":3},"endLoc":{"line":44,"col":4},"count":0,"ignored":0},{"startLoc":{"line":43,"col":5},"endLoc":{"line":44,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":6},{"name":"CaseViewModel.getState","count":0,"regions":[{"startLoc":{"line":47,"col":3},"endLoc":{"line":49,"col":4},"count":0,"ignored":0},{"startLoc":{"line":48,"col":5},"endLoc":{"line":49,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":7},{"name":"CaseViewModel.getProgress","count":0,"regions":[{"startLoc":{"line":51,"col":3},"endLoc":{"line":53,"col":4},"count":0,"ignored":0},{"startLoc":{"line":52,"col":5},"endLoc":{"line":53,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":8},{"name":"CaseViewModel.getAvailability","count":0,"regions":[{"startLoc":{"line":55,"col":3},"endLoc":{"line":57,"col":4},"count":0,"ignored":0},{"startLoc":{"line":56,"col":5},"endLoc":{"line":57,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":9},{"name":"CaseViewModel.getBody","count":0,"regions":[{"startLoc":{"line":59,"col":3},"endLoc":{"line":61,"col":4},"count":0,"ignored":0},{"startLoc":{"line":60,"col":5},"endLoc":{"line":61,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":10},{"name":"CaseViewModel.getChoices","count":0,"regions":[{"startLoc":{"line":63,"col":3},"endLoc":{"line":65,"col":4},"count":0,"ignored":0},{"startLoc":{"line":64,"col":5},"endLoc":{"line":65,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":11},{"name":"CaseViewModel.getSceneEvents","count":0,"regions":[{"startLoc":{"line":67,"col":3},"endLoc":{"line":69,"col":4},"count":0,"ignored":0},{"startLoc":{"line":68,"col":5},"endLoc":{"line":69,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":12},{"name":"CaseViewModel.getVerdict","count":0,"regions":[{"startLoc":{"line":71,"col":3},"endLoc":{"line":73,"col":4},"count":0,"ignored":0},{"startLoc":{"line":72,"col":5},"endLoc":{"line":73,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":13},{"name":"CaseViewModel.getEnding","count":0,"regions":[{"startLoc":{"line":75,"col":3},"endLoc":{"line":80,"col":4},"count":0,"ignored":0},{"startLoc":{"line":76,"col":43},"endLoc":{"line":78,"col":6},"count":0,"ignored":0},{"startLoc":{"line":79,"col":5},"endLoc":{"line":80,"col":4},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":76,"col":9},"endLoc":{"line":76,"col":41},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":14},{"name":"CaseViewModel.findEndingById","count":0,"regions":[{"startLoc":{"line":82,"col":3},"endLoc":{"line":90,"col":4},"count":0,"ignored":0},{"startLoc":{"line":84,"col":5},"endLoc":{"line":88,"col":6},"count":0,"ignored":0},{"startLoc":{"line":85,"col":29},"endLoc":{"line":87,"col":8},"count":0,"ignored":0},{"startLoc":{"line":89,"col":5},"endLoc":{"line":90,"col":4},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":85,"col":11},"endLoc":{"line":85,"col":27},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":15},{"name":"CaseViewModel.choose","count":0,"regions":[{"startLoc":{"line":93,"col":3},"endLoc":{"line":102,"col":4},"count":0,"ignored":0},{"startLoc":{"line":99,"col":5},"endLoc":{"line":102,"col":4},"count":0,"ignored":0},{"startLoc":{"line":96,"col":27},"endLoc":{"line":98,"col":6},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":96,"col":9},"endLoc":{"line":96,"col":25},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":16},{"name":"CaseViewModel.selectScene","count":0,"regions":[{"startLoc":{"line":104,"col":3},"endLoc":{"line":113,"col":4},"count":0,"ignored":0},{"startLoc":{"line":108,"col":5},"endLoc":{"line":113,"col":4},"count":0,"ignored":0},{"startLoc":{"line":105,"col":40},"endLoc":{"line":107,"col":6},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":105,"col":9},"endLoc":{"line":105,"col":38},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":17},{"name":"CaseViewModel.setHypothesis","count":0,"regions":[{"startLoc":{"line":116,"col":3},"endLoc":{"line":122,"col":4},"count":0,"ignored":0},{"startLoc":{"line":117,"col":5},"endLoc":{"line":122,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":18},{"name":"CaseViewModel.submitVerdict","count":0,"regions":[{"startLoc":{"line":125,"col":3},"endLoc":{"line":134,"col":4},"count":0,"ignored":0},{"startLoc":{"line":126,"col":5},"endLoc":{"line":134,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":19},{"name":"CaseViewModel.restartCase","count":0,"regions":[{"startLoc":{"line":137,"col":3},"endLoc":{"line":140,"col":4},"count":0,"ignored":0},{"startLoc":{"line":138,"col":5},"endLoc":{"line":140,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":20},{"name":"CaseViewModel.flush","count":0,"regions":[{"startLoc":{"line":143,"col":3},"endLoc":{"line":145,"col":4},"count":0,"ignored":0},{"startLoc":{"line":144,"col":5},"endLoc":{"line":145,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":21},{"name":"CaseViewModel.enqueuePersist","count":0,"regions":[{"startLoc":{"line":147,"col":3},"endLoc":{"line":153,"col":4},"count":0,"ignored":0},{"startLoc":{"line":148,"col":5},"endLoc":{"line":153,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":22},{"name":"anonymous_4","count":0,"regions":[{"startLoc":{"line":150,"col":13},"endLoc":{"line":150,"col":58},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":23},{"name":"anonymous_5","count":0,"regions":[{"startLoc":{"line":151,"col":14},"endLoc":{"line":152,"col":8},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":24},{"name":"CaseViewModel.persistNow","count":0,"regions":[{"startLoc":{"line":155,"col":3},"endLoc":{"line":158,"col":4},"count":0,"ignored":0},{"startLoc":{"line":156,"col":5},"endLoc":{"line":158,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":25}],"exeLine":{"0":10,"1":11,"2":12,"3":13,"4":14,"5":15,"6":17,"7":18,"8":19,"9":20,"10":21,"11":22,"12":23,"13":24,"14":26,"15":27,"16":28,"17":29,"18":30,"19":34,"20":35,"21":36,"22":37,"23":38,"24":39,"25":42,"26":43,"27":47,"28":48,"29":51,"30":52,"31":55,"32":56,"33":59,"34":60,"35":63,"36":64,"37":67,"38":68,"39":71,"40":72,"41":75,"42":76,"43":77,"44":79,"45":82,"46":83,"47":84,"48":85,"49":86,"50":89,"51":93,"52":94,"53":95,"54":96,"55":97,"56":99,"57":100,"58":101,"59":104,"60":105,"61":106,"62":108,"63":109,"64":110,"65":111,"66":112,"67":116,"68":117,"69":118,"70":119,"71":120,"72":121,"73":125,"74":126,"75":127,"76":128,"77":129,"78":130,"79":131,"80":132,"81":133,"82":137,"83":138,"84":139,"85":143,"86":144,"87":147,"88":148,"89":149,"90":150,"91":151,"92":155,"93":156,"94":157},"summary":{"lines":{"total":83,"covered":0,"pct":0,"executedLineCount":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,-1,-1,-1,0,0,0,0,0,-1,-1,-1,0,0,0,0,0,0,-1,-1,0,0,-1,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,0,-1,0,-1,-1,0,0,0,0,0,-1,-1,0,-1,-1,-1,0,0,0,0,0,-1,0,0,0,-1,-1,0,0,0,-1,0,0,0,0,0,-1,-1,-1,0,0,0,0,0,0,-1,-1,-1,0,0,0,0,0,0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1,0,0,-1,-1,0,0,0,0,0,-1,-1,-1,0,0,0,-1,-1,-1]},"functions":{"total":26,"covered":0,"pct":0},"branches":{"total":8,"covered":0,"pct":0}}},"title":"CaseViewModel.ets.html","relativeHome":"../index.html"};
+    }
+  };
+
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+
+  window.onload = function () {
+    prettyPrint();
+  }
+</script>
+
+<style scoped>
+  table.coverage {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  table.coverage td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  table.coverage td.line-count {
+    width: 12%;
+    text-align: right;
+    padding: 0 5px 0 20px;
+  }
+
+  table.coverage td.line-coverage {
+    text-align: right;
+    padding-right: 10px;
+    min-width: 20px;
+  }
+
+  table.coverage td span.cline-any {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    height: 18px;
+  }
+
+  .low,
+  .cline-no {
+    background: #FCE1E5
+  }
+
+  .high,
+  .cline-yes {
+    background: rgb(230, 245, 208)
+  }
+
+  span.cline-neutral {
+    background: #eaeaea;
+  }
+
+  pre.prettyprint {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .el-main {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    overflow: auto;
+    padding: var(--el-main-padding)
+  }
+
+  .el-container {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .green {
+    color: var(--el-color-success);
+  }
+
+  .red {
+    color: var(--el-color-error);
+  }
+
+  .linenums li {
+    height: 18px;
+    line-height: 18px;
+  }
+
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: decimal
+  }
+
+  .el-col-5 {
+    max-width: 100%;
+  }
+
+  .el-col-3 {
+    max-width: 100%;
+  }
+
+</style>
+
+</html>

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../prettify.css" />
+  <!-- Import Vue 3 -->
+  <script src="../vue.global.prod.js"></script>
+  <!-- Import component library -->
+  <script src="../index.full.min.js"></script>
+  <script src="../prettify.js"></script>
+  <meta charset="UTF-8">
+  <title>Coverage</title>
+</head>
+
+<body>
+  <div id="app" class="common-layout">
+    <el-container>
+      <el-header>
+        <el-row :gutter="10">
+          <el-col :span="5">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <el-link type="primary" :href="relativeHome">
+                    <h2>&lt;</h2>
+                  </el-link>
+                </el-text></div>
+              <div><el-text class="mx-1 "><h2>{{title}}</h2></el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info"></el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.functions.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Functions</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.functions.covered}}/{{file.summary.functions.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.branches.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Branches</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.branches.covered}}/{{file.summary.branches.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.lines.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Lines</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.lines.covered}}/{{file.summary.lines.total}}</el-text></div>
+            </el-space>
+          </el-col>
+        </el-row>
+        <el-divider />
+      </el-header>
+      <el-main>
+        <el-row>
+        </el-row>
+        <pre>
+          <table class="coverage">
+            <tr>
+              <td class="line-count quiet">
+                <pre class="prettyprint lang-js">
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+                </pre>
+        </td>
+        <td class="text">
+          <pre class="prettyprint linenums lang-js">
+/** 
+ * IStateRepository.ets 
+ * M4 持久化抽象：纯接口，零系统依赖、零装饰器。 
+ * 生产实现 StateRepository.ets 与测试替身 InMemoryStateRepository.ets 均实现此接口。 
+ */ 
+ 
+import { GameState, sanitizeGameState as fromModels } from &#39;../model/Models&#39;; 
+ 
+/** 白名单反序列化入口（唯一实现位于 Models.ets，此处仅转发）。 */ 
+export function sanitizeState(raw: string): GameState | null { 
+  return fromModels(raw); 
+} 
+ 
+export interface IStateRepository { 
+  /** 读取状态；空串返回新案，破损串写备份键后回落新案，不抛异常。 */ 
+  load(): Promise&lt;GameState&gt;; 
+  /** 写入状态；实现方须先克隆并按 MAX_JOURNAL 裁剪日志。 */ 
+  save(state: GameState): Promise&lt;void&gt;; 
+  /** 清空存档并写入一枚全新案件（用于「重新开局」）。 */ 
+  clearAll(): Promise&lt;void&gt;; 
+  /** 读取最近一次解析失败的原始串；正常恢复时为空串。 */ 
+  readBackup(): Promise&lt;string&gt;; 
+} 
+
+              </pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
+      </el-main>
+      <el-footer align="middle" class="footer">
+        Code coverage generated by <el-link href="https://github.com/SMAT-Lab/bjc" type="primary"
+          target="_blank">bjc</el-link> at {{date}}
+      </el-footer>
+    </el-container>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {"date":"Sun Nov 15 2026 12:31:47 GMT+0800 (China Standard Time)","file":{"version":"bjc v1.0.0","versionCode":10000,"path":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles/entry/src/main/ets/repository/IStateRepository.ets","hash":"181db27b37b61b8bffccb6f454c55abd5b4f2fa311b1978a110c17801b7150cc","lineCnt":24,"count":0,"projectPath":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles","projectPathHash":"7e62e222253fa57eef9057adbbabd5292338b5f8a05fc98ff006f1c6dabd13cf","functions":[{"name":"sanitizeState","count":5,"regions":[{"startLoc":{"line":10,"col":1},"endLoc":{"line":12,"col":2},"count":5,"ignored":0},{"startLoc":{"line":11,"col":3},"endLoc":{"line":12,"col":2},"count":5,"ignored":0}],"branches":[],"ignored":0,"index":0},{"name":"load","count":0,"regions":[{"startLoc":{"line":16,"col":3},"endLoc":{"line":16,"col":30},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":1},{"name":"save","count":0,"regions":[{"startLoc":{"line":18,"col":3},"endLoc":{"line":18,"col":41},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":2},{"name":"clearAll","count":0,"regions":[{"startLoc":{"line":20,"col":3},"endLoc":{"line":20,"col":29},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":3},{"name":"readBackup","count":0,"regions":[{"startLoc":{"line":22,"col":3},"endLoc":{"line":22,"col":33},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":4}],"exeLine":{"0":7,"1":10,"2":11,"3":14,"4":16,"5":18,"6":20,"7":22},"summary":{"lines":{"total":6,"covered":2,"pct":33.33,"executedLineCount":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,5,5,-1,-1,-1,-1,0,-1,0,-1,0,-1,0,-1,-1]},"functions":{"total":5,"covered":1,"pct":20},"branches":{"total":0,"covered":0,"pct":100}}},"title":"IStateRepository.ets.html","relativeHome":"../index.html"};
+    }
+  };
+
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+
+  window.onload = function () {
+    prettyPrint();
+  }
+</script>
+
+<style scoped>
+  table.coverage {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  table.coverage td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  table.coverage td.line-count {
+    width: 12%;
+    text-align: right;
+    padding: 0 5px 0 20px;
+  }
+
+  table.coverage td.line-coverage {
+    text-align: right;
+    padding-right: 10px;
+    min-width: 20px;
+  }
+
+  table.coverage td span.cline-any {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    height: 18px;
+  }
+
+  .low,
+  .cline-no {
+    background: #FCE1E5
+  }
+
+  .high,
+  .cline-yes {
+    background: rgb(230, 245, 208)
+  }
+
+  span.cline-neutral {
+    background: #eaeaea;
+  }
+
+  pre.prettyprint {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .el-main {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    overflow: auto;
+    padding: var(--el-main-padding)
+  }
+
+  .el-container {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .green {
+    color: var(--el-color-success);
+  }
+
+  .red {
+    color: var(--el-color-error);
+  }
+
+  .linenums li {
+    height: 18px;
+    line-height: 18px;
+  }
+
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: decimal
+  }
+
+  .el-col-5 {
+    max-width: 100%;
+  }
+
+  .el-col-3 {
+    max-width: 100%;
+  }
+
+</style>
+
+</html>

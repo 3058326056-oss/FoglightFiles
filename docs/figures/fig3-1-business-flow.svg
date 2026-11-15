@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620">
+  <rect x="0" y="0" width="1200" height="620" fill="#FAF8F4"/>
+  <text x="40" y="40" font-family="PingFang SC, sans-serif" font-size="24" font-weight="bold" fill="#2F3E4E">图3.1 「一次选择 → 状态变化 → 落盘 → 重绘」业务流程图</text>
+  <text x="40" y="68" font-family="PingFang SC, sans-serif" font-size="14" fill="#7A7A72">本人负责全链路：界面、门槛判定、分支效果、持久化、状态广播与恢复</text>
+
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="40" y="100" width="170" height="104" rx="10" fill="#E6F1FB" stroke="#85B7EB"/>
+    <text x="125" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#0C447C">① 用户点击选项</text>
+    <text x="125" y="150" text-anchor="middle" font-size="11" fill="#185FA5">ExploreView</text>
+    <text x="125" y="168" text-anchor="middle" font-size="11" fill="#185FA5">onChoose(eventId,</text>
+    <text x="125" y="186" text-anchor="middle" font-size="11" fill="#185FA5">choiceId)</text>
+
+    <rect x="228" y="100" width="170" height="104" rx="10" fill="#EEEDFE" stroke="#CECBF6"/>
+    <text x="313" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#3C3489">② 门槛校验</text>
+    <text x="313" y="150" text-anchor="middle" font-size="11" fill="#534AB7">线索 / flag / 锁定表</text>
+    <text x="313" y="168" text-anchor="middle" font-size="11" fill="#534AB7">checkAvailability()</text>
+    <text x="313" y="186" text-anchor="middle" font-size="11" fill="#534AB7">分支变体正文</text>
+
+    <rect x="416" y="100" width="170" height="104" rx="10" fill="#EEEDFE" stroke="#CECBF6"/>
+    <text x="501" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#3C3489">③ 应用 effects</text>
+    <text x="501" y="150" text-anchor="middle" font-size="11" fill="#534AB7">ADD_CLUE / SET_FLAG</text>
+    <text x="501" y="168" text-anchor="middle" font-size="11" fill="#534AB7">LOCK_EVENT / TRUST</text>
+    <text x="501" y="186" text-anchor="middle" font-size="11" fill="#534AB7">applyChoice 纯函数</text>
+
+    <rect x="604" y="100" width="170" height="104" rx="10" fill="#E1F5EE" stroke="#9FE1CB"/>
+    <text x="689" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#085041">④ 生成新状态</text>
+    <text x="689" y="150" text-anchor="middle" font-size="11" fill="#0F6E56">GameState 副本</text>
+    <text x="689" y="168" text-anchor="middle" font-size="11" fill="#0F6E56">+ JournalEntry</text>
+    <text x="689" y="186" text-anchor="middle" font-size="11" fill="#0F6E56">（不修改入参）</text>
+
+    <rect x="792" y="100" width="170" height="104" rx="10" fill="#FAEEDA" stroke="#FAC775"/>
+    <text x="877" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#633806">⑤ await 落盘</text>
+    <text x="877" y="150" text-anchor="middle" font-size="11" fill="#854F0B">repo.save(state)</text>
+    <text x="877" y="168" text-anchor="middle" font-size="11" fill="#854F0B">put + flush</text>
+    <text x="877" y="186" text-anchor="middle" font-size="11" fill="#854F0B">Preferences</text>
+
+    <rect x="980" y="100" width="180" height="104" rx="10" fill="#E6F1FB" stroke="#85B7EB"/>
+    <text x="1070" y="126" text-anchor="middle" font-size="13" font-weight="bold" fill="#0C447C">⑥ 广播与重绘</text>
+    <text x="1070" y="150" text-anchor="middle" font-size="11" fill="#185FA5">bumpVersion()</text>
+    <text x="1070" y="168" text-anchor="middle" font-size="11" fill="#185FA5">@StorageLink 通知</text>
+    <text x="1070" y="186" text-anchor="middle" font-size="11" fill="#185FA5">@State 新引用</text>
+  </g>
+
+  <g stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)">
+    <path d="M210 152 L224 152"/>
+    <path d="M398 152 L412 152"/>
+    <path d="M586 152 L600 152"/>
+    <path d="M774 152 L788 152"/>
+    <path d="M962 152 L976 152"/>
+  </g>
+
+  <path d="M313 204 L313 242" stroke="#B0473C" stroke-width="1.5" fill="none" marker-end="url(#arrowRed)"/>
+  <rect x="180" y="244" width="266" height="66" rx="10" fill="#FCEBEB" stroke="#F09595"/>
+  <text x="313" y="268" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="13" font-weight="bold" fill="#791F1F">异常 / 边界：accepted=false</text>
+  <text x="313" y="288" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="11" fill="#A32D2D">状态不变、不写盘、卡片显示「尚缺线索 / 路径已关闭」</text>
+
+  <rect x="40" y="336" width="354" height="126" rx="10" fill="#FFFFFF" stroke="#E3DED4"/>
+  <text x="217" y="364" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" font-weight="bold" fill="#2F3E4E">线索板 / 阶段进度 / 关键提示</text>
+  <text x="217" y="390" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">读取同一份 GameState（SSOT）</text>
+  <text x="217" y="412" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">9 条线索按获得状态刷新，★定案齐备度 3/3</text>
+  <text x="217" y="434" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#B4782D">本人负责 · deriveStage / getProgress</text>
+
+  <rect x="423" y="336" width="354" height="126" rx="10" fill="#FFFFFF" stroke="#E3DED4"/>
+  <text x="600" y="364" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" font-weight="bold" fill="#2F3E4E">推理验证 → 最终判断 → 结局</text>
+  <text x="600" y="390" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">validateHypothesis：三项断言 + 3 条定案线索 + 时间线</text>
+  <text x="600" y="412" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">resolveEnding 固定优先级：误判 → 断裂 → 真相 → 残缺</text>
+  <text x="600" y="434" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#B4782D">本人负责 · 4 个结局由不同条件触发</text>
+
+  <rect x="806" y="336" width="354" height="126" rx="10" fill="#FFFFFF" stroke="#E3DED4"/>
+  <text x="983" y="364" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="15" font-weight="bold" fill="#2F3E4E">结束进程 → 冷启动恢复</text>
+  <text x="983" y="390" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">EntryAbility 置 isReady=false → await restore()</text>
+  <text x="983" y="412" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">白名单校验 / 损坏回落 → 渲染结局页或当前进度</text>
+  <text x="983" y="434" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#B4782D">本人负责 · 线索 / flag / 日志 / 结局逐项一致</text>
+
+  <path d="M1070 204 L1070 320 L217 320 L217 332" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1070 204 L1070 320 L600 320 L600 332" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M1070 204 L1070 320 L983 320 L983 332" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="490" width="1120" height="88" rx="10" fill="#F6EAD8" stroke="#FAC775"/>
+  <text x="60" y="516" font-family="PingFang SC, sans-serif" font-size="14" font-weight="bold" fill="#633806">完整体验链路（需求说明书第 6 章）：接受调查 → 搜集线索 → 交叉验证 → 验证推理条件 → 作出最终判断 → 进入对应结局 → 杀进程重启恢复</text>
+  <text x="60" y="542" font-family="PingFang SC, sans-serif" font-size="12" fill="#854F0B">分支实证：在便签处选「当场念给大家听」→ exposed_note=true + LOCK E09 → 证人改口、送修回执不可达、结局变为《没有寄出的稿子》</text>
+  <text x="60" y="564" font-family="PingFang SC, sans-serif" font-size="12" fill="#B4782D">全部节点由本人独立完成；纯逻辑层可被 12 条 Local Unit Test 直接 import 验证</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#7A7A72" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#B0473C" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+</svg>

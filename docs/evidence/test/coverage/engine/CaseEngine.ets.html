@@ -1,0 +1,1105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../prettify.css" />
+  <!-- Import Vue 3 -->
+  <script src="../vue.global.prod.js"></script>
+  <!-- Import component library -->
+  <script src="../index.full.min.js"></script>
+  <script src="../prettify.js"></script>
+  <meta charset="UTF-8">
+  <title>Coverage</title>
+</head>
+
+<body>
+  <div id="app" class="common-layout">
+    <el-container>
+      <el-header>
+        <el-row :gutter="10">
+          <el-col :span="5">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <el-link type="primary" :href="relativeHome">
+                    <h2>&lt;</h2>
+                  </el-link>
+                </el-text></div>
+              <div><el-text class="mx-1 "><h2>{{title}}</h2></el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info"></el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.functions.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Functions</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.functions.covered}}/{{file.summary.functions.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.branches.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Branches</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.branches.covered}}/{{file.summary.branches.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.lines.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Lines</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.lines.covered}}/{{file.summary.lines.total}}</el-text></div>
+            </el-space>
+          </el-col>
+        </el-row>
+        <el-divider />
+      </el-header>
+      <el-main>
+        <el-row>
+        </el-row>
+        <pre>
+          <table class="coverage">
+            <tr>
+              <td class="line-count quiet">
+                <pre class="prettyprint lang-js">
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">70x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-yes">26x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66x</span>
+<span class="cline-any cline-yes">66x</span>
+<span class="cline-any cline-yes">144x</span>
+<span class="cline-any cline-yes">144x</span>
+<span class="cline-any cline-yes">144x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">144x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">144x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">128x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">66x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">71x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">107x</span>
+<span class="cline-any cline-yes">77x</span>
+<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">51x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+                </pre>
+        </td>
+        <td class="text">
+          <pre class="prettyprint linenums lang-js">
+/** 
+ * CaseEngine.ets 
+ * M1 案件推理引擎：纯逻辑、零 @ohos.* 依赖、零装饰器、零副作用。 
+ * 
+ * 所有方法都是纯函数：不修改入参、不取系统时间/随机数、不读写持久化、不通知 UI。 
+ * now / entryId 由调用方注入，保证相同输入必得相同结果，可被 Local Unit Test 直接断言。 
+ * 
+ * 负责：事件可用性、变体正文、选择效果、推理条件验证、结局判定、阶段与进度推导。 
+ */ 
+ 
+import { 
+  Availability, Choice, ChoiceResult, Clue, Effect, EffectKind, Ending, EventNode, 
+  GameState, Hypothesis, JournalEntry, Progress, Stage, Verdict, 
+  DECISIVE_CLUE_IDS, contains, capJournal, clampTrust, cloneGameState, cloneStringArray, 
+  createNewCase, isValidClueId, isValidEventId 
+} from &#39;../model/Models&#39;; 
+import { 
+  CLUES, EVENTS, ENDINGS, clueTitle, eventsOfScene, findChoice, findEnding, findEvent 
+} from &#39;../model/CaseCatalog&#39;; 
+ 
+/** 阶段中文名：用显式分支而非对象字面量，满足 ArkTS 静态类型约束。 */ 
+function stageLabelOf(stage: Stage): string { 
+  if (stage === &#39;BRIEFING&#39;) { 
+    return &#39;接受调查&#39;; 
+  } 
+  if (stage === &#39;SEARCH&#39;) { 
+    return &#39;搜集线索&#39;; 
+  } 
+  if (stage === &#39;CROSSCHECK&#39;) { 
+    return &#39;交叉验证&#39;; 
+  } 
+  if (stage === &#39;VERDICT&#39;) { 
+    return &#39;最终判断&#39;; 
+  } 
+  if (stage === &#39;ENDING&#39;) { 
+    return &#39;案件结案&#39;; 
+  } 
+  return stage; 
+} 
+ 
+export class CaseEngine { 
+ 
+  /** 依据线索、flag、锁定表与分支禁令判断一个事件当前是否可达，并给出可读原因。 */ 
+  checkAvailability(state: GameState, event: EventNode): Availability { 
+    const missingClues: string[] = []; 
+    const missingFlags: string[] = []; 
+    let blockedBy: string = &#39;&#39;; 
+    let reason: string = &#39;&#39;; 
+ 
+    if (contains(state.completedEvents, event.id)) { 
+      blockedBy = &#39;COMPLETED&#39;; 
+      reason = &#39;该事件已查阅&#39;; 
+    } else if (contains(state.lockedEvents, event.id)) { 
+      blockedBy = &#39;LOCKED&#39;; 
+      reason = &#39;因之前的选择，这条取证路径已经关闭&#39;; 
+    } else { 
+      for (let i = 0; i &lt; event.requiresClues.length; i++) { 
+        const clueId: string = event.requiresClues[i]; 
+        if (!contains(state.clues, clueId)) { 
+          missingClues.push(clueId); 
+        } 
+      } 
+      for (let i = 0; i &lt; event.requiresFlags.length; i++) { 
+        const flagKey: string = event.requiresFlags[i]; 
+        if (state.flags[flagKey] !== true) { 
+          missingFlags.push(flagKey); 
+        } 
+      } 
+      for (let i = 0; i &lt; event.forbiddenFlags.length; i++) { 
+        if (state.flags[event.forbiddenFlags[i]] === true) { 
+          blockedBy = &#39;BRANCH&#39;; 
+          reason = &#39;当前剧情分支下，这件事不会发生&#39;; 
+          break; 
+        } 
+      } 
+      if (blockedBy.length === 0 &amp;&amp; (missingClues.length &gt; 0 || missingFlags.length &gt; 0)) { 
+        blockedBy = &#39;GATED&#39;; 
+        const parts: string[] = []; 
+        if (missingClues.length &gt; 0) { 
+          const names: string[] = []; 
+          for (let i = 0; i &lt; missingClues.length; i++) { 
+            names.push(clueTitle(missingClues[i])); 
+          } 
+          parts.push(&#39;尚缺线索：&#39; + names.join(&#39;、&#39;)); 
+        } 
+        if (missingFlags.length &gt; 0) { 
+          parts.push(&#39;需先完成：&#39; + missingFlags.join(&#39;、&#39;)); 
+        } 
+        reason = parts.join(&#39;；&#39;); 
+      } 
+    } 
+ 
+    const available: boolean = blockedBy.length === 0; 
+    return { 
+      available: available, 
+      missingClues: missingClues, 
+      missingFlags: missingFlags, 
+      blockedBy: blockedBy, 
+      reason: available ? &#39;可查阅&#39; : reason 
+    }; 
+  } 
+ 
+  /** 当前可查阅的全部事件（已完成 / 已锁定 / 门槛不足的都不返回）。 */ 
+  availableEvents(state: GameState): EventNode[] { 
+    const out: EventNode[] = []; 
+    for (let i = 0; i &lt; EVENTS.length; i++) { 
+      if (this.checkAvailability(state, EVENTS[i]).available) { 
+        out.push(EVENTS[i]); 
+      } 
+    } 
+    return out; 
+  } 
+ 
+  /** 场景内全部事件（含锁定与已完成，供 UI 显示原因）。 */ 
+  sceneEvents(state: GameState, sceneId: string): EventNode[] { 
+    return eventsOfScene(sceneId); 
+  } 
+ 
+  /** 分支变体：altFlag 命中时显示完全不同的正文，这是「选择改变后续事件」的可见证据。 */ 
+  resolveBody(state: GameState, event: EventNode): string { 
+    if (event.altFlag.length &gt; 0 &amp;&amp; state.flags[event.altFlag] === true) { 
+      return event.altBody; 
+    } 
+    return event.body; 
+  } 
+ 
+  /** 当前分支下真正可点的选项。 */ 
+  availableChoices(state: GameState, event: EventNode): Choice[] { 
+    const out: Choice[] = []; 
+    for (let i = 0; i &lt; event.choices.length; i++) { 
+      const choice: Choice = event.choices[i]; 
+      let ok: boolean = true; 
+      for (let j = 0; j &lt; choice.requiresClues.length; j++) { 
+        if (!contains(state.clues, choice.requiresClues[j])) { 
+          ok = false; 
+          break; 
+        } 
+      } 
+      if (!ok) { 
+        continue; 
+      } 
+      for (let j = 0; j &lt; choice.requiresFlags.length; j++) { 
+        if (state.flags[choice.requiresFlags[j]] !== true) { 
+          ok = false; 
+          break; 
+        } 
+      } 
+      if (!ok) { 
+        continue; 
+      } 
+      for (let j = 0; j &lt; choice.forbiddenFlags.length; j++) { 
+        if (state.flags[choice.forbiddenFlags[j]] === true) { 
+          ok = false; 
+          break; 
+        } 
+      } 
+      if (ok) { 
+        out.push(choice); 
+      } 
+    } 
+    return out; 
+  } 
+ 
+  private reject(state: GameState, message: string): ChoiceResult { 
+    return { 
+      accepted: false, 
+      state: cloneGameState(state), 
+      journalEntry: null, 
+      gainedClues: [], 
+      unlockedEvents: [], 
+      message: message 
+    }; 
+  } 
+ 
+  /** 
+   * 应用一次选择：校验 → 深拷贝 → 应用 effects → 记日志 → 返回新状态。 
+   * 任何非法输入都返回 accepted=false，且绝不修改入参。 
+   */ 
+  applyChoice(state: GameState, eventId: string, choiceId: string, 
+              now: number, entryId: string): ChoiceResult { 
+    if (!isValidEventId(eventId)) { 
+      return this.reject(state, &#39;不存在的事件，操作已忽略&#39;); 
+    } 
+    const event: EventNode | null = findEvent(eventId); 
+    if (event === null) { 
+      return this.reject(state, &#39;不存在的事件，操作已忽略&#39;); 
+    } 
+    if (entryId.length === 0) { 
+      return this.reject(state, &#39;缺少日志标识，操作已忽略&#39;); 
+    } 
+    const availability: Availability = this.checkAvailability(state, event); 
+    if (!availability.available) { 
+      return this.reject(state, availability.reason); 
+    } 
+    const choice: Choice | null = findChoice(event, choiceId); 
+    if (choice === null) { 
+      return this.reject(state, &#39;不存在的选项，操作已忽略&#39;); 
+    } 
+    const choices: Choice[] = this.availableChoices(state, event); 
+    let choiceAllowed: boolean = false; 
+    for (let i = 0; i &lt; choices.length; i++) { 
+      if (choices[i].id === choiceId) { 
+        choiceAllowed = true; 
+        break; 
+      } 
+    } 
+    if (!choiceAllowed) { 
+      return this.reject(state, &#39;当前分支下该选项不可用&#39;); 
+    } 
+ 
+    const next: GameState = cloneGameState(state); 
+    const gainedClues: string[] = []; 
+    const unlockedEvents: string[] = []; 
+ 
+    for (let i = 0; i &lt; choice.effects.length; i++) { 
+      const effect: Effect = choice.effects[i]; 
+      const kind: EffectKind = effect.kind; 
+      if (kind === &#39;ADD_CLUE&#39;) { 
+        if (isValidClueId(effect.key) &amp;&amp; !contains(next.clues, effect.key)) { 
+          next.clues.push(effect.key); 
+          gainedClues.push(effect.key); 
+        } 
+      } else if (kind === &#39;SET_FLAG&#39;) { 
+        next.flags[effect.key] = effect.boolValue; 
+      } else if (kind === &#39;ADJUST_TRUST&#39;) { 
+        next.trust = clampTrust(next.trust + effect.numValue); 
+      } else if (kind === &#39;LOCK_EVENT&#39;) { 
+        if (isValidEventId(effect.key) &amp;&amp; !contains(next.lockedEvents, effect.key)) { 
+          next.lockedEvents.push(effect.key); 
+        } 
+      } else if (kind === &#39;UNLOCK_EVENT&#39;) { 
+        const kept: string[] = []; 
+        for (let j = 0; j &lt; next.lockedEvents.length; j++) { 
+          if (next.lockedEvents[j] !== effect.key) { 
+            kept.push(next.lockedEvents[j]); 
+          } else { 
+            unlockedEvents.push(effect.key); 
+          } 
+        } 
+        next.lockedEvents = kept; 
+      } 
+    } 
+ 
+    if (!contains(next.completedEvents, event.id)) { 
+      next.completedEvents.push(event.id); 
+    } 
+ 
+    let seq: number = 1; 
+    if (next.journal.length &gt; 0) { 
+      seq = next.journal[next.journal.length - 1].seq + 1; 
+    } 
+    const entry: JournalEntry = { 
+      seq: seq, 
+      timestamp: now, 
+      eventId: event.id, 
+      choiceId: choice.id, 
+      text: choice.resultText, 
+      gainedClues: cloneStringArray(gainedClues) 
+    }; 
+    next.journal.push(entry); 
+    next.journal = capJournal(next.journal); 
+    next.updatedAt = now; 
+ 
+    return { 
+      accepted: true, 
+      state: next, 
+      journalEntry: entry, 
+      gainedClues: gainedClues, 
+      unlockedEvents: unlockedEvents, 
+      message: choice.resultText 
+    }; 
+  } 
+ 
+  /** 推理条件验证：三项选择 + 3 条定案线索 + 时间线固定。 */ 
+  validateHypothesis(state: GameState, hypothesis: Hypothesis): Verdict { 
+    const errors: string[] = []; 
+    const missingClues: string[] = []; 
+    const matchedClues: string[] = []; 
+ 
+    if (hypothesis.suspect.length === 0) { 
+      errors.push(&#39;尚未选择指认对象&#39;); 
+    } 
+    if (hypothesis.motive.length === 0) { 
+      errors.push(&#39;尚未选择动机&#39;); 
+    } 
+    if (hypothesis.timeline.length === 0) { 
+      errors.push(&#39;尚未选择断电时间线&#39;); 
+    } 
+    for (let i = 0; i &lt; DECISIVE_CLUE_IDS.length; i++) { 
+      const id: string = DECISIVE_CLUE_IDS[i]; 
+      if (contains(state.clues, id)) { 
+        matchedClues.push(id); 
+      } else { 
+        missingClues.push(id); 
+      } 
+    } 
+    if (state.flags[&#39;timeline_fixed&#39;] !== true) { 
+      errors.push(&#39;时间线尚未固定，需导出 21:30–22:00 监控片段&#39;); 
+    } 
+ 
+    const ready: boolean = errors.length === 0 &amp;&amp; missingClues.length === 0; 
+    let hint: string = &#39;&#39;; 
+    if (ready) { 
+      hint = &#39;证据链已闭合，可以提交最终判断&#39;; 
+    } else if (missingClues.length &gt; 0) { 
+      const names: string[] = []; 
+      for (let i = 0; i &lt; missingClues.length; i++) { 
+        names.push(clueTitle(missingClues[i])); 
+      } 
+      hint = &#39;仍缺定案线索：&#39; + names.join(&#39;、&#39;); 
+    } else { 
+      hint = &#39;请补全推理台的判断项&#39;; 
+    } 
+    return { 
+      ready: ready, 
+      errors: errors, 
+      missingClues: missingClues, 
+      matchedClues: matchedClues, 
+      hint: hint 
+    }; 
+  } 
+ 
+  /** 
+   * 结局判定：按需求说明书 7.4 的固定优先级，命中即返回，结果唯一可复现。 
+   * 1 指认对象错误 → 误判；2 证人改口 → 断裂；3 完整证据链 → 真相；4 其余 → 残缺。 
+   */ 
+  resolveEnding(state: GameState, hypothesis: Hypothesis): Ending { 
+    let id: string = &#39;END_PARTIAL&#39;; 
+    if (hypothesis.suspect !== &#39;president&#39;) { 
+      id = &#39;END_MISJUDGE&#39;; 
+    } else if (state.flags[&#39;exposed_note&#39;] === true || state.flags[&#39;witness_recanted&#39;] === true) { 
+      id = &#39;END_COVER&#39;; 
+    } else { 
+      const verdict: Verdict = this.validateHypothesis(state, hypothesis); 
+      const caseReady: boolean = state.flags[&#39;case_ready&#39;] === true; 
+      if (verdict.ready &amp;&amp; caseReady &amp;&amp; hypothesis.motive === &#39;grade&#39; &amp;&amp; hypothesis.timeline === &#39;2140&#39;) { 
+        id = &#39;END_TRUTH&#39;; 
+      } 
+    } 
+    const ending: Ending | null = findEnding(id); 
+    if (ending === null) { 
+      const fallback: Ending | null = findEnding(&#39;END_PARTIAL&#39;); 
+      return fallback === null ? ENDINGS[0] : fallback; 
+    } 
+    return ending; 
+  } 
+ 
+  /** 阶段由状态推导，不持久化，避免存档与推导不一致。 */ 
+  deriveStage(state: GameState): Stage { 
+    if (state.endingId.length &gt; 0) { 
+      return &#39;ENDING&#39;; 
+    } 
+    if (state.flags[&#39;accepted&#39;] !== true) { 
+      return &#39;BRIEFING&#39;; 
+    } 
+    if (state.clues.length &lt; 6) { 
+      return &#39;SEARCH&#39;; 
+    } 
+    if (state.flags[&#39;timeline_fixed&#39;] !== true) { 
+      return &#39;CROSSCHECK&#39;; 
+    } 
+    return &#39;VERDICT&#39;; 
+  } 
+ 
+  /** 阶段进度与关键状态提示。 */ 
+  getProgress(state: GameState): Progress { 
+    const stage: Stage = this.deriveStage(state); 
+    const clueCount: number = state.clues.length; 
+    const eventCount: number = state.completedEvents.length; 
+    const totalClues: number = CLUES.length; 
+    const totalEvents: number = EVENTS.length; 
+    const ratio: number = (clueCount / totalClues) * 0.6 + (eventCount / totalEvents) * 0.4; 
+    let percent: number = Math.round(ratio * 100); 
+    if (percent &gt; 100) { 
+      percent = 100; 
+    } 
+ 
+    const hints: string[] = []; 
+    if (state.endingId.length &gt; 0) { 
+      hints.push(&#39;案件已结案，可查看结局回顾或重新开局&#39;); 
+    } else if (state.flags[&#39;accepted&#39;] !== true) { 
+      hints.push(&#39;先在旧馆接受调查委托&#39;); 
+      hints.push(&#39;三个场景可随时切换，锁定事件会写明原因&#39;); 
+    } else { 
+      if (!contains(state.clues, &#39;C5&#39;)) { 
+        hints.push(&#39;还缺 ★奖杯送修回执：先取得目击者信任，别公开便签&#39;); 
+      } 
+      if (!contains(state.clues, &#39;C7&#39;)) { 
+        hints.push(&#39;还缺 ★监控日志断点：先到连廊配电间确认跳闸痕迹&#39;); 
+      } 
+      if (!contains(state.clues, &#39;C8&#39;)) { 
+        hints.push(&#39;还缺 ★备份推荐名单：在连廊消防门后&#39;); 
+      } 
+      if (state.flags[&#39;timeline_fixed&#39;] !== true) { 
+        hints.push(&#39;导出 21:30–22:00 监控片段才能固定时间线&#39;); 
+      } 
+      if (state.flags[&#39;case_ready&#39;] !== true &amp;&amp; contains(state.clues, &#39;C5&#39;) &amp;&amp; 
+          contains(state.clues, &#39;C8&#39;) &amp;&amp; state.flags[&#39;timeline_fixed&#39;] === true) { 
+        hints.push(&#39;证据链已齐，去「第七盏灯」还原完整时间线&#39;); 
+      } 
+      if (hints.length === 0) { 
+        hints.push(&#39;条件齐备，可前往推理台验证并提交最终判断&#39;); 
+      } 
+    } 
+ 
+    const label: string = stageLabelOf(stage); 
+    return { 
+      stage: stage, 
+      stageLabel: label, 
+      clueCount: clueCount, 
+      totalClues: totalClues, 
+      eventCount: eventCount, 
+      totalEvents: totalEvents, 
+      percent: percent, 
+      hints: hints 
+    }; 
+  } 
+ 
+  /** 重新开局：返回一个全新的、与当前状态无关的案件状态。 */ 
+  createFreshCase(now: number): GameState { 
+    return createNewCase(now); 
+  } 
+ 
+  /** 结局目录（供结局页与 ViewModel 查询）。 */ 
+  listEndings(): Ending[] { 
+    return ENDINGS; 
+  } 
+ 
+  /** 线索板用：按 id 取线索详情。 */ 
+  clueDetail(id: string): Clue | null { 
+    for (let i = 0; i &lt; CLUES.length; i++) { 
+      if (CLUES[i].id === id) { 
+        return CLUES[i]; 
+      } 
+    } 
+    return null; 
+  } 
+} 
+
+              </pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
+      </el-main>
+      <el-footer align="middle" class="footer">
+        Code coverage generated by <el-link href="https://github.com/SMAT-Lab/bjc" type="primary"
+          target="_blank">bjc</el-link> at {{date}}
+      </el-footer>
+    </el-container>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {"date":"Sun Nov 15 2026 12:31:47 GMT+0800 (China Standard Time)","file":{"version":"bjc v1.0.0","versionCode":10000,"path":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles/entry/src/main/ets/engine/CaseEngine.ets","hash":"c259a9914d8703d16050952ae391246fcf6a84474861413e56dfcf8015bb9753","lineCnt":439,"count":0,"projectPath":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles","projectPathHash":"7e62e222253fa57eef9057adbbabd5292338b5f8a05fc98ff006f1c6dabd13cf","functions":[{"name":"stageLabelOf","count":2,"regions":[{"startLoc":{"line":22,"col":1},"endLoc":{"line":39,"col":2},"count":2,"ignored":0},{"startLoc":{"line":23,"col":29},"endLoc":{"line":25,"col":4},"count":0,"ignored":0},{"startLoc":{"line":26,"col":27},"endLoc":{"line":28,"col":4},"count":1,"ignored":0},{"startLoc":{"line":29,"col":31},"endLoc":{"line":31,"col":4},"count":0,"ignored":0},{"startLoc":{"line":32,"col":28},"endLoc":{"line":34,"col":4},"count":1,"ignored":0},{"startLoc":{"line":35,"col":27},"endLoc":{"line":37,"col":4},"count":0,"ignored":0},{"startLoc":{"line":38,"col":3},"endLoc":{"line":39,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":23,"col":7},"endLoc":{"line":23,"col":27},"trueCount":0,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":26,"col":7},"endLoc":{"line":26,"col":25},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":29,"col":7},"endLoc":{"line":29,"col":29},"trueCount":0,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":32,"col":7},"endLoc":{"line":32,"col":26},"trueCount":1,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":35,"col":7},"endLoc":{"line":35,"col":25},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":0},{"name":"CaseEngine.checkAvailability","count":71,"regions":[{"startLoc":{"line":44,"col":3},"endLoc":{"line":101,"col":4},"count":71,"ignored":0},{"startLoc":{"line":53,"col":12},"endLoc":{"line":91,"col":6},"count":70,"ignored":0},{"startLoc":{"line":56,"col":12},"endLoc":{"line":91,"col":6},"count":68,"ignored":0},{"startLoc":{"line":76,"col":91},"endLoc":{"line":90,"col":8},"count":1,"ignored":0},{"startLoc":{"line":93,"col":5},"endLoc":{"line":101,"col":4},"count":71,"ignored":0},{"startLoc":{"line":69,"col":7},"endLoc":{"line":75,"col":8},"count":0,"ignored":0},{"startLoc":{"line":79,"col":38},"endLoc":{"line":85,"col":10},"count":1,"ignored":0},{"startLoc":{"line":57,"col":7},"endLoc":{"line":62,"col":8},"count":41,"ignored":0},{"startLoc":{"line":63,"col":7},"endLoc":{"line":68,"col":8},"count":26,"ignored":0},{"startLoc":{"line":70,"col":60},"endLoc":{"line":74,"col":10},"count":0,"ignored":0},{"startLoc":{"line":50,"col":52},"endLoc":{"line":53,"col":6},"count":1,"ignored":0},{"startLoc":{"line":53,"col":56},"endLoc":{"line":56,"col":6},"count":2,"ignored":0},{"startLoc":{"line":59,"col":45},"endLoc":{"line":61,"col":10},"count":1,"ignored":0},{"startLoc":{"line":65,"col":44},"endLoc":{"line":67,"col":10},"count":0,"ignored":0},{"startLoc":{"line":81,"col":11},"endLoc":{"line":83,"col":12},"count":1,"ignored":0},{"startLoc":{"line":86,"col":38},"endLoc":{"line":88,"col":10},"count":0,"ignored":0},{"startLoc":{"line":89,"col":9},"endLoc":{"line":90,"col":8},"count":1,"ignored":0},{"startLoc":{"line":84,"col":11},"endLoc":{"line":85,"col":10},"count":1,"ignored":0}],"branches":[{"startLoc":{"line":50,"col":9},"endLoc":{"line":50,"col":50},"trueCount":1,"falseCount":70,"group":[],"ignored":0},{"startLoc":{"line":53,"col":16},"endLoc":{"line":53,"col":54},"trueCount":2,"falseCount":68,"group":[],"ignored":0},{"startLoc":{"line":59,"col":13},"endLoc":{"line":59,"col":43},"trueCount":1,"falseCount":40,"group":[],"ignored":0},{"startLoc":{"line":65,"col":13},"endLoc":{"line":65,"col":42},"trueCount":0,"falseCount":26,"group":[],"ignored":0},{"startLoc":{"line":70,"col":13},"endLoc":{"line":70,"col":58},"trueCount":0,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":76,"col":11},"endLoc":{"line":76,"col":89},"trueCount":1,"falseCount":67,"group":[],"ignored":0},{"startLoc":{"line":79,"col":13},"endLoc":{"line":79,"col":36},"trueCount":1,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":86,"col":13},"endLoc":{"line":86,"col":36},"trueCount":0,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":99,"col":15},"endLoc":{"line":99,"col":41},"trueCount":67,"falseCount":4,"group":[],"ignored":0}],"ignored":0,"index":1},{"name":"CaseEngine.availableEvents","count":0,"regions":[{"startLoc":{"line":104,"col":3},"endLoc":{"line":112,"col":4},"count":0,"ignored":0},{"startLoc":{"line":106,"col":5},"endLoc":{"line":110,"col":6},"count":0,"ignored":0},{"startLoc":{"line":107,"col":63},"endLoc":{"line":109,"col":8},"count":0,"ignored":0},{"startLoc":{"line":111,"col":5},"endLoc":{"line":112,"col":4},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":107,"col":11},"endLoc":{"line":107,"col":61},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":2},{"name":"CaseEngine.sceneEvents","count":0,"regions":[{"startLoc":{"line":115,"col":3},"endLoc":{"line":117,"col":4},"count":0,"ignored":0},{"startLoc":{"line":116,"col":5},"endLoc":{"line":117,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":3},{"name":"CaseEngine.resolveBody","count":2,"regions":[{"startLoc":{"line":120,"col":3},"endLoc":{"line":125,"col":4},"count":2,"ignored":0},{"startLoc":{"line":121,"col":74},"endLoc":{"line":123,"col":6},"count":2,"ignored":0},{"startLoc":{"line":124,"col":5},"endLoc":{"line":125,"col":4},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":121,"col":9},"endLoc":{"line":121,"col":72},"trueCount":2,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":4},{"name":"CaseEngine.availableChoices","count":66,"regions":[{"startLoc":{"line":128,"col":3},"endLoc":{"line":162,"col":4},"count":66,"ignored":0},{"startLoc":{"line":130,"col":5},"endLoc":{"line":160,"col":6},"count":144,"ignored":0},{"startLoc":{"line":133,"col":7},"endLoc":{"line":138,"col":8},"count":0,"ignored":0},{"startLoc":{"line":142,"col":7},"endLoc":{"line":147,"col":8},"count":12,"ignored":0},{"startLoc":{"line":151,"col":7},"endLoc":{"line":156,"col":8},"count":24,"ignored":0},{"startLoc":{"line":134,"col":62},"endLoc":{"line":137,"col":10},"count":0,"ignored":0},{"startLoc":{"line":143,"col":60},"endLoc":{"line":146,"col":10},"count":8,"ignored":0},{"startLoc":{"line":152,"col":61},"endLoc":{"line":155,"col":10},"count":8,"ignored":0},{"startLoc":{"line":139,"col":16},"endLoc":{"line":141,"col":8},"count":0,"ignored":0},{"startLoc":{"line":148,"col":16},"endLoc":{"line":150,"col":8},"count":8,"ignored":0},{"startLoc":{"line":157,"col":15},"endLoc":{"line":159,"col":8},"count":128,"ignored":0},{"startLoc":{"line":161,"col":5},"endLoc":{"line":162,"col":4},"count":66,"ignored":0}],"branches":[{"startLoc":{"line":134,"col":13},"endLoc":{"line":134,"col":60},"trueCount":0,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":139,"col":11},"endLoc":{"line":139,"col":14},"trueCount":0,"falseCount":144,"group":[],"ignored":0},{"startLoc":{"line":143,"col":13},"endLoc":{"line":143,"col":58},"trueCount":8,"falseCount":4,"group":[],"ignored":0},{"startLoc":{"line":148,"col":11},"endLoc":{"line":148,"col":14},"trueCount":8,"falseCount":136,"group":[],"ignored":0},{"startLoc":{"line":152,"col":13},"endLoc":{"line":152,"col":59},"trueCount":8,"falseCount":16,"group":[],"ignored":0},{"startLoc":{"line":157,"col":11},"endLoc":{"line":157,"col":13},"trueCount":128,"falseCount":8,"group":[],"ignored":0}],"ignored":0,"index":5},{"name":"CaseEngine.reject","count":6,"regions":[{"startLoc":{"line":164,"col":3},"endLoc":{"line":173,"col":4},"count":6,"ignored":0},{"startLoc":{"line":165,"col":5},"endLoc":{"line":173,"col":4},"count":6,"ignored":0}],"branches":[],"ignored":0,"index":6},{"name":"CaseEngine.applyChoice","count":69,"regions":[{"startLoc":{"line":179,"col":3},"endLoc":{"line":272,"col":4},"count":69,"ignored":0},{"startLoc":{"line":215,"col":5},"endLoc":{"line":242,"col":6},"count":155,"ignored":0},{"startLoc":{"line":252,"col":5},"endLoc":{"line":272,"col":4},"count":63,"ignored":0},{"startLoc":{"line":223,"col":14},"endLoc":{"line":241,"col":8},"count":107,"ignored":0},{"startLoc":{"line":225,"col":14},"endLoc":{"line":241,"col":8},"count":30,"ignored":0},{"startLoc":{"line":227,"col":14},"endLoc":{"line":241,"col":8},"count":2,"ignored":0},{"startLoc":{"line":231,"col":14},"endLoc":{"line":241,"col":8},"count":0,"ignored":0},{"startLoc":{"line":231,"col":43},"endLoc":{"line":241,"col":8},"count":0,"ignored":0},{"startLoc":{"line":233,"col":9},"endLoc":{"line":239,"col":10},"count":0,"ignored":0},{"startLoc":{"line":201,"col":5},"endLoc":{"line":206,"col":6},"count":71,"ignored":0},{"startLoc":{"line":218,"col":32},"endLoc":{"line":223,"col":8},"count":48,"ignored":0},{"startLoc":{"line":227,"col":41},"endLoc":{"line":231,"col":8},"count":2,"ignored":0},{"startLoc":{"line":202,"col":39},"endLoc":{"line":205,"col":8},"count":63,"ignored":0},{"startLoc":{"line":219,"col":77},"endLoc":{"line":222,"col":10},"count":44,"ignored":0},{"startLoc":{"line":181,"col":35},"endLoc":{"line":183,"col":6},"count":1,"ignored":0},{"startLoc":{"line":185,"col":25},"endLoc":{"line":187,"col":6},"count":0,"ignored":0},{"startLoc":{"line":188,"col":31},"endLoc":{"line":190,"col":6},"count":1,"ignored":0},{"startLoc":{"line":192,"col":34},"endLoc":{"line":194,"col":6},"count":2,"ignored":0},{"startLoc":{"line":196,"col":26},"endLoc":{"line":198,"col":6},"count":1,"ignored":0},{"startLoc":{"line":207,"col":25},"endLoc":{"line":209,"col":6},"count":1,"ignored":0},{"startLoc":{"line":223,"col":39},"endLoc":{"line":225,"col":8},"count":77,"ignored":0},{"startLoc":{"line":225,"col":43},"endLoc":{"line":227,"col":8},"count":28,"ignored":0},{"startLoc":{"line":228,"col":85},"endLoc":{"line":230,"col":10},"count":2,"ignored":0},{"startLoc":{"line":234,"col":52},"endLoc":{"line":236,"col":12},"count":0,"ignored":0},{"startLoc":{"line":236,"col":18},"endLoc":{"line":238,"col":12},"count":0,"ignored":0},{"startLoc":{"line":244,"col":52},"endLoc":{"line":246,"col":6},"count":63,"ignored":0},{"startLoc":{"line":249,"col":34},"endLoc":{"line":251,"col":6},"count":51,"ignored":0},{"startLoc":{"line":240,"col":9},"endLoc":{"line":241,"col":8},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":181,"col":9},"endLoc":{"line":181,"col":33},"trueCount":1,"falseCount":68,"group":[],"ignored":0},{"startLoc":{"line":185,"col":9},"endLoc":{"line":185,"col":23},"trueCount":0,"falseCount":68,"group":[],"ignored":0},{"startLoc":{"line":188,"col":9},"endLoc":{"line":188,"col":29},"trueCount":1,"falseCount":67,"group":[],"ignored":0},{"startLoc":{"line":192,"col":9},"endLoc":{"line":192,"col":32},"trueCount":2,"falseCount":65,"group":[],"ignored":0},{"startLoc":{"line":196,"col":9},"endLoc":{"line":196,"col":24},"trueCount":1,"falseCount":64,"group":[],"ignored":0},{"startLoc":{"line":202,"col":11},"endLoc":{"line":202,"col":37},"trueCount":63,"falseCount":8,"group":[],"ignored":0},{"startLoc":{"line":207,"col":9},"endLoc":{"line":207,"col":23},"trueCount":1,"falseCount":63,"group":[],"ignored":0},{"startLoc":{"line":218,"col":11},"endLoc":{"line":218,"col":30},"trueCount":48,"falseCount":107,"group":[],"ignored":0},{"startLoc":{"line":219,"col":13},"endLoc":{"line":219,"col":75},"trueCount":44,"falseCount":4,"group":[],"ignored":0},{"startLoc":{"line":223,"col":18},"endLoc":{"line":223,"col":37},"trueCount":77,"falseCount":30,"group":[],"ignored":0},{"startLoc":{"line":225,"col":18},"endLoc":{"line":225,"col":41},"trueCount":28,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":227,"col":18},"endLoc":{"line":227,"col":39},"trueCount":2,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":228,"col":13},"endLoc":{"line":228,"col":83},"trueCount":2,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":231,"col":18},"endLoc":{"line":231,"col":41},"trueCount":0,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":234,"col":15},"endLoc":{"line":234,"col":50},"trueCount":0,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":244,"col":9},"endLoc":{"line":244,"col":50},"trueCount":63,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":249,"col":9},"endLoc":{"line":249,"col":32},"trueCount":51,"falseCount":12,"group":[],"ignored":0}],"ignored":0,"index":7},{"name":"CaseEngine.validateHypothesis","count":4,"regions":[{"startLoc":{"line":275,"col":3},"endLoc":{"line":321,"col":4},"count":4,"ignored":0},{"startLoc":{"line":305,"col":12},"endLoc":{"line":313,"col":6},"count":2,"ignored":0},{"startLoc":{"line":289,"col":5},"endLoc":{"line":296,"col":6},"count":12,"ignored":0},{"startLoc":{"line":314,"col":5},"endLoc":{"line":321,"col":4},"count":4,"ignored":0},{"startLoc":{"line":305,"col":41},"endLoc":{"line":311,"col":6},"count":2,"ignored":0},{"startLoc":{"line":280,"col":42},"endLoc":{"line":282,"col":6},"count":0,"ignored":0},{"startLoc":{"line":283,"col":41},"endLoc":{"line":285,"col":6},"count":2,"ignored":0},{"startLoc":{"line":286,"col":43},"endLoc":{"line":288,"col":6},"count":2,"ignored":0},{"startLoc":{"line":291,"col":38},"endLoc":{"line":293,"col":8},"count":6,"ignored":0},{"startLoc":{"line":293,"col":14},"endLoc":{"line":295,"col":8},"count":6,"ignored":0},{"startLoc":{"line":297,"col":49},"endLoc":{"line":299,"col":6},"count":2,"ignored":0},{"startLoc":{"line":303,"col":16},"endLoc":{"line":305,"col":6},"count":2,"ignored":0},{"startLoc":{"line":311,"col":12},"endLoc":{"line":313,"col":6},"count":0,"ignored":0},{"startLoc":{"line":307,"col":7},"endLoc":{"line":309,"col":8},"count":6,"ignored":0},{"startLoc":{"line":310,"col":7},"endLoc":{"line":311,"col":6},"count":2,"ignored":0}],"branches":[{"startLoc":{"line":280,"col":9},"endLoc":{"line":280,"col":40},"trueCount":0,"falseCount":4,"group":[],"ignored":0},{"startLoc":{"line":283,"col":9},"endLoc":{"line":283,"col":39},"trueCount":2,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":286,"col":9},"endLoc":{"line":286,"col":41},"trueCount":2,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":291,"col":11},"endLoc":{"line":291,"col":36},"trueCount":6,"falseCount":6,"group":[],"ignored":0},{"startLoc":{"line":297,"col":9},"endLoc":{"line":297,"col":47},"trueCount":2,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":303,"col":9},"endLoc":{"line":303,"col":14},"trueCount":2,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":305,"col":16},"endLoc":{"line":305,"col":39},"trueCount":2,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":8},{"name":"CaseEngine.resolveEnding","count":5,"regions":[{"startLoc":{"line":327,"col":3},"endLoc":{"line":346,"col":4},"count":5,"ignored":0},{"startLoc":{"line":331,"col":12},"endLoc":{"line":339,"col":6},"count":3,"ignored":0},{"startLoc":{"line":333,"col":12},"endLoc":{"line":339,"col":6},"count":2,"ignored":0},{"startLoc":{"line":341,"col":26},"endLoc":{"line":344,"col":6},"count":0,"ignored":0},{"startLoc":{"line":329,"col":45},"endLoc":{"line":331,"col":6},"count":2,"ignored":0},{"startLoc":{"line":331,"col":98},"endLoc":{"line":333,"col":6},"count":1,"ignored":0},{"startLoc":{"line":336,"col":106},"endLoc":{"line":338,"col":8},"count":1,"ignored":0},{"startLoc":{"line":345,"col":5},"endLoc":{"line":346,"col":4},"count":5,"ignored":0}],"branches":[{"startLoc":{"line":329,"col":9},"endLoc":{"line":329,"col":43},"trueCount":2,"falseCount":3,"group":[],"ignored":0},{"startLoc":{"line":331,"col":16},"endLoc":{"line":331,"col":96},"trueCount":1,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":336,"col":11},"endLoc":{"line":336,"col":104},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":341,"col":9},"endLoc":{"line":341,"col":24},"trueCount":0,"falseCount":5,"group":[],"ignored":0},{"startLoc":{"line":343,"col":14},"endLoc":{"line":343,"col":55},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":9},{"name":"CaseEngine.deriveStage","count":6,"regions":[{"startLoc":{"line":349,"col":3},"endLoc":{"line":363,"col":4},"count":6,"ignored":0},{"startLoc":{"line":350,"col":36},"endLoc":{"line":352,"col":6},"count":1,"ignored":0},{"startLoc":{"line":353,"col":43},"endLoc":{"line":355,"col":6},"count":1,"ignored":0},{"startLoc":{"line":356,"col":33},"endLoc":{"line":358,"col":6},"count":2,"ignored":0},{"startLoc":{"line":359,"col":49},"endLoc":{"line":361,"col":6},"count":0,"ignored":0},{"startLoc":{"line":362,"col":5},"endLoc":{"line":363,"col":4},"count":2,"ignored":0}],"branches":[{"startLoc":{"line":350,"col":9},"endLoc":{"line":350,"col":34},"trueCount":1,"falseCount":5,"group":[],"ignored":0},{"startLoc":{"line":353,"col":9},"endLoc":{"line":353,"col":41},"trueCount":1,"falseCount":4,"group":[],"ignored":0},{"startLoc":{"line":356,"col":9},"endLoc":{"line":356,"col":31},"trueCount":2,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":359,"col":9},"endLoc":{"line":359,"col":47},"trueCount":0,"falseCount":2,"group":[],"ignored":0}],"ignored":0,"index":10},{"name":"CaseEngine.getProgress","count":2,"regions":[{"startLoc":{"line":366,"col":3},"endLoc":{"line":417,"col":4},"count":2,"ignored":0},{"startLoc":{"line":381,"col":12},"endLoc":{"line":404,"col":6},"count":2,"ignored":0},{"startLoc":{"line":384,"col":12},"endLoc":{"line":404,"col":6},"count":2,"ignored":0},{"startLoc":{"line":406,"col":5},"endLoc":{"line":417,"col":4},"count":2,"ignored":0},{"startLoc":{"line":381,"col":50},"endLoc":{"line":384,"col":6},"count":0,"ignored":0},{"startLoc":{"line":374,"col":24},"endLoc":{"line":376,"col":6},"count":0,"ignored":0},{"startLoc":{"line":379,"col":36},"endLoc":{"line":381,"col":6},"count":0,"ignored":0},{"startLoc":{"line":385,"col":41},"endLoc":{"line":387,"col":8},"count":1,"ignored":0},{"startLoc":{"line":388,"col":41},"endLoc":{"line":390,"col":8},"count":1,"ignored":0},{"startLoc":{"line":391,"col":41},"endLoc":{"line":393,"col":8},"count":1,"ignored":0},{"startLoc":{"line":394,"col":51},"endLoc":{"line":396,"col":8},"count":1,"ignored":0},{"startLoc":{"line":398,"col":82},"endLoc":{"line":400,"col":8},"count":0,"ignored":0},{"startLoc":{"line":401,"col":31},"endLoc":{"line":403,"col":8},"count":1,"ignored":0}],"branches":[{"startLoc":{"line":374,"col":9},"endLoc":{"line":374,"col":22},"trueCount":0,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":379,"col":9},"endLoc":{"line":379,"col":34},"trueCount":0,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":381,"col":16},"endLoc":{"line":381,"col":48},"trueCount":0,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":385,"col":11},"endLoc":{"line":385,"col":39},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":388,"col":11},"endLoc":{"line":388,"col":39},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":391,"col":11},"endLoc":{"line":391,"col":39},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":394,"col":11},"endLoc":{"line":394,"col":49},"trueCount":1,"falseCount":1,"group":[],"ignored":0},{"startLoc":{"line":397,"col":11},"endLoc":{"line":398,"col":80},"trueCount":0,"falseCount":2,"group":[],"ignored":0},{"startLoc":{"line":401,"col":11},"endLoc":{"line":401,"col":29},"trueCount":1,"falseCount":1,"group":[],"ignored":0}],"ignored":0,"index":11},{"name":"CaseEngine.createFreshCase","count":0,"regions":[{"startLoc":{"line":420,"col":3},"endLoc":{"line":422,"col":4},"count":0,"ignored":0},{"startLoc":{"line":421,"col":5},"endLoc":{"line":422,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":12},{"name":"CaseEngine.listEndings","count":0,"regions":[{"startLoc":{"line":425,"col":3},"endLoc":{"line":427,"col":4},"count":0,"ignored":0},{"startLoc":{"line":426,"col":5},"endLoc":{"line":427,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":13},{"name":"CaseEngine.clueDetail","count":0,"regions":[{"startLoc":{"line":430,"col":3},"endLoc":{"line":437,"col":4},"count":0,"ignored":0},{"startLoc":{"line":431,"col":5},"endLoc":{"line":435,"col":6},"count":0,"ignored":0},{"startLoc":{"line":432,"col":31},"endLoc":{"line":434,"col":8},"count":0,"ignored":0},{"startLoc":{"line":436,"col":5},"endLoc":{"line":437,"col":4},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":432,"col":11},"endLoc":{"line":432,"col":29},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":14}],"exeLine":{"0":11,"1":12,"2":13,"3":14,"4":15,"5":16,"6":17,"7":18,"8":19,"9":22,"10":23,"11":24,"12":26,"13":27,"14":29,"15":30,"16":32,"17":33,"18":35,"19":36,"20":38,"21":41,"22":44,"23":45,"24":46,"25":47,"26":48,"27":50,"28":51,"29":52,"30":53,"31":54,"32":55,"33":56,"34":57,"35":58,"36":59,"37":60,"38":63,"39":64,"40":65,"41":66,"42":69,"43":70,"44":71,"45":72,"46":73,"47":76,"48":77,"49":78,"50":79,"51":80,"52":81,"53":82,"54":84,"55":86,"56":87,"57":89,"58":93,"59":94,"60":95,"61":96,"62":97,"63":98,"64":99,"65":104,"66":105,"67":106,"68":107,"69":108,"70":111,"71":115,"72":116,"73":120,"74":121,"75":122,"76":124,"77":128,"78":129,"79":130,"80":131,"81":132,"82":133,"83":134,"84":135,"85":136,"86":139,"87":140,"88":142,"89":143,"90":144,"91":145,"92":148,"93":149,"94":151,"95":152,"96":153,"97":154,"98":157,"99":158,"100":161,"101":164,"102":165,"103":166,"104":167,"105":168,"106":169,"107":170,"108":171,"109":179,"110":180,"111":181,"112":182,"113":184,"114":185,"115":186,"116":188,"117":189,"118":191,"119":192,"120":193,"121":195,"122":196,"123":197,"124":199,"125":200,"126":201,"127":202,"128":203,"129":204,"130":207,"131":208,"132":211,"133":212,"134":213,"135":215,"136":216,"137":217,"138":218,"139":219,"140":220,"141":221,"142":223,"143":224,"144":225,"145":226,"146":227,"147":228,"148":229,"149":231,"150":232,"151":233,"152":234,"153":235,"154":236,"155":237,"156":240,"157":244,"158":245,"159":248,"160":249,"161":250,"162":252,"163":253,"164":254,"165":255,"166":256,"167":257,"168":258,"169":260,"170":261,"171":262,"172":264,"173":265,"174":266,"175":267,"176":268,"177":269,"178":270,"179":275,"180":276,"181":277,"182":278,"183":280,"184":281,"185":283,"186":284,"187":286,"188":287,"189":289,"190":290,"191":291,"192":292,"193":293,"194":294,"195":297,"196":298,"197":301,"198":302,"199":303,"200":304,"201":305,"202":306,"203":307,"204":308,"205":310,"206":311,"207":312,"208":314,"209":315,"210":316,"211":317,"212":318,"213":319,"214":327,"215":328,"216":329,"217":330,"218":331,"219":332,"220":333,"221":334,"222":335,"223":336,"224":337,"225":340,"226":341,"227":342,"228":343,"229":345,"230":349,"231":350,"232":351,"233":353,"234":354,"235":356,"236":357,"237":359,"238":360,"239":362,"240":366,"241":367,"242":368,"243":369,"244":370,"245":371,"246":372,"247":373,"248":374,"249":375,"250":378,"251":379,"252":380,"253":381,"254":382,"255":383,"256":384,"257":385,"258":386,"259":388,"260":389,"261":391,"262":392,"263":394,"264":395,"265":397,"266":398,"267":399,"268":401,"269":402,"270":406,"271":407,"272":408,"273":409,"274":410,"275":411,"276":412,"277":413,"278":414,"279":415,"280":420,"281":421,"282":425,"283":426,"284":430,"285":431,"286":432,"287":433,"288":436},"summary":{"lines":{"total":279,"covered":224,"pct":80.29,"executedLineCount":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,2,2,0,-1,2,1,-1,1,0,-1,1,1,-1,0,0,-1,0,-1,-1,-1,-1,-1,71,71,71,71,71,-1,71,1,1,70,2,2,2,41,41,41,1,-1,-1,26,26,26,0,-1,-1,0,0,0,0,0,-1,-1,68,1,1,1,1,1,1,-1,1,-1,1,0,-1,1,-1,-1,-1,71,71,71,71,71,71,71,-1,-1,-1,-1,0,0,0,0,0,-1,-1,0,-1,-1,-1,0,0,-1,-1,-1,2,2,2,-1,0,-1,-1,-1,66,66,144,144,144,0,0,0,0,-1,-1,144,0,-1,12,12,8,8,-1,-1,144,8,-1,24,24,8,8,-1,-1,136,128,-1,-1,66,-1,-1,6,6,6,6,6,6,6,6,-1,-1,-1,-1,-1,-1,-1,69,69,69,1,-1,69,68,0,-1,68,1,-1,69,67,2,-1,69,65,1,-1,69,69,71,71,63,63,-1,-1,64,1,-1,-1,69,69,69,-1,155,155,155,155,48,44,44,-1,107,77,30,28,2,2,2,-1,0,0,0,0,0,0,0,-1,-1,0,-1,-1,-1,63,63,-1,-1,69,63,51,-1,63,63,63,63,63,63,63,-1,63,63,63,-1,63,63,63,63,63,63,63,-1,-1,-1,-1,4,4,4,4,-1,4,0,-1,4,2,-1,4,2,-1,12,12,12,6,6,6,-1,-1,4,2,-1,-1,4,4,4,2,2,2,6,6,-1,2,2,0,-1,4,4,4,4,4,4,-1,-1,-1,-1,-1,-1,-1,5,5,5,2,3,1,1,2,2,2,1,-1,-1,5,5,0,0,-1,5,-1,-1,-1,6,6,1,-1,5,1,-1,4,2,-1,2,0,-1,2,-1,-1,-1,2,2,2,2,2,2,2,2,2,0,-1,-1,2,2,0,2,0,0,0,2,1,-1,2,1,-1,2,1,-1,2,1,-1,2,2,0,-1,2,1,-1,-1,-1,2,2,2,2,2,2,2,2,2,2,-1,-1,-1,-1,0,0,-1,-1,-1,0,0,-1,-1,-1,0,0,0,0,-1,-1,0,-1,-1,-1]},"functions":{"total":15,"covered":10,"pct":66.67},"branches":{"total":130,"covered":94,"pct":72.31}}},"title":"CaseEngine.ets.html","relativeHome":"../index.html"};
+    }
+  };
+
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+
+  window.onload = function () {
+    prettyPrint();
+  }
+</script>
+
+<style scoped>
+  table.coverage {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  table.coverage td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  table.coverage td.line-count {
+    width: 12%;
+    text-align: right;
+    padding: 0 5px 0 20px;
+  }
+
+  table.coverage td.line-coverage {
+    text-align: right;
+    padding-right: 10px;
+    min-width: 20px;
+  }
+
+  table.coverage td span.cline-any {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    height: 18px;
+  }
+
+  .low,
+  .cline-no {
+    background: #FCE1E5
+  }
+
+  .high,
+  .cline-yes {
+    background: rgb(230, 245, 208)
+  }
+
+  span.cline-neutral {
+    background: #eaeaea;
+  }
+
+  pre.prettyprint {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .el-main {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    overflow: auto;
+    padding: var(--el-main-padding)
+  }
+
+  .el-container {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .green {
+    color: var(--el-color-success);
+  }
+
+  .red {
+    color: var(--el-color-error);
+  }
+
+  .linenums li {
+    height: 18px;
+    line-height: 18px;
+  }
+
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: decimal
+  }
+
+  .el-col-5 {
+    max-width: 100%;
+  }
+
+  .el-col-3 {
+    max-width: 100%;
+  }
+
+</style>
+
+</html>

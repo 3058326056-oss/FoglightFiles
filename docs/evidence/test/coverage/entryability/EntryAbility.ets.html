@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../prettify.css" />
+  <!-- Import Vue 3 -->
+  <script src="../vue.global.prod.js"></script>
+  <!-- Import component library -->
+  <script src="../index.full.min.js"></script>
+  <script src="../prettify.js"></script>
+  <meta charset="UTF-8">
+  <title>Coverage</title>
+</head>
+
+<body>
+  <div id="app" class="common-layout">
+    <el-container>
+      <el-header>
+        <el-row :gutter="10">
+          <el-col :span="5">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <el-link type="primary" :href="relativeHome">
+                    <h2>&lt;</h2>
+                  </el-link>
+                </el-text></div>
+              <div><el-text class="mx-1 "><h2>{{title}}</h2></el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info"></el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.functions.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Functions</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.functions.covered}}/{{file.summary.functions.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.branches.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Branches</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.branches.covered}}/{{file.summary.branches.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.lines.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Lines</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.lines.covered}}/{{file.summary.lines.total}}</el-text></div>
+            </el-space>
+          </el-col>
+        </el-row>
+        <el-divider />
+      </el-header>
+      <el-main>
+        <el-row>
+        </el-row>
+        <pre>
+          <table class="coverage">
+            <tr>
+              <td class="line-count quiet">
+                <pre class="prettyprint lang-js">
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+                </pre>
+        </td>
+        <td class="text">
+          <pre class="prettyprint linenums lang-js">
+/** 
+ * EntryAbility.ets 
+ * M6 应用装配与生命周期。 
+ * 
+ * 冷启动门禁（EX-04 / B5）：onWindowStageCreate 先置 isReady=false → 加载 Index（只渲染加载态） 
+ * → loadContent 回调里 void bootstrap() → await vm.restore() → isReady=true → 一次性 hydrate。 
+ * 保证恢复完成前不渲染业务内容，也不会把默认新案回写覆盖存档。 
+ * onBackground 兜底 flush()（EX-06）。 
+ */ 
+ 
+import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from &#39;@kit.AbilityKit&#39;; 
+import { hilog } from &#39;@kit.PerformanceAnalysisKit&#39;; 
+import { promptAction, window } from &#39;@kit.ArkUI&#39;; 
+import { CaseEngine } from &#39;../engine/CaseEngine&#39;; 
+import { InMemoryStateRepository } from &#39;../repository/InMemoryStateRepository&#39;; 
+import { StateRepository } from &#39;../repository/StateRepository&#39;; 
+import { CaseViewModel } from &#39;../viewmodel/CaseViewModel&#39;; 
+import { getViewModel, hasViewModel, setViewModel } from &#39;../viewmodel/AppContext&#39;; 
+ 
+const DOMAIN: number = 0x0000; 
+const TAG: string = &#39;FoglightAbility&#39;; 
+ 
+export default class EntryAbility extends UIAbility { 
+  private mainWindowStage: window.WindowStage | undefined = undefined; 
+  private journalSeq: number = 0; 
+ 
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void { 
+    hilog.info(DOMAIN, TAG, &#39;%{public}s&#39;, &#39;Ability onCreate&#39;); 
+  } 
+ 
+  onDestroy(): void { 
+    hilog.info(DOMAIN, TAG, &#39;%{public}s&#39;, &#39;Ability onDestroy&#39;); 
+  } 
+ 
+  onWindowStageCreate(windowStage: window.WindowStage): void { 
+    AppStorage.setOrCreate(&#39;isReady&#39;, false); 
+    AppStorage.setOrCreate(&#39;restoreFallback&#39;, false); 
+    this.mainWindowStage = windowStage; 
+ 
+    windowStage.loadContent(&#39;pages/Index&#39;, (err) =&gt; { 
+      if (err.code) { 
+        hilog.error(DOMAIN, TAG, &#39;loadContent failed: %{public}s&#39;, JSON.stringify(err)); 
+        AppStorage.setOrCreate(&#39;isReady&#39;, true); 
+        return; 
+      } 
+      hilog.info(DOMAIN, TAG, &#39;%{public}s&#39;, &#39;loadContent succeeded&#39;); 
+      void this.bootstrap(); 
+    }); 
+ 
+    try { 
+      this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET); 
+    } catch (err) { 
+      hilog.error(DOMAIN, TAG, &#39;setColorMode failed: %{public}s&#39;, JSON.stringify(err)); 
+    } 
+  } 
+ 
+  private async bootstrap(): Promise&lt;void&gt; { 
+    try { 
+      const repo: StateRepository = new StateRepository(this.context); 
+      const vm: CaseViewModel = new CaseViewModel( 
+        repo, new CaseEngine(), (): number =&gt; Date.now(), this.createIdGen()); 
+      setViewModel(vm); 
+      await vm.restore(); 
+      const fallback: boolean = vm.didRestoreFallback(); 
+      AppStorage.setOrCreate(&#39;restoreFallback&#39;, fallback); 
+      AppStorage.setOrCreate(&#39;isReady&#39;, true); 
+      if (fallback) { 
+        this.showToast(&#39;存档异常，已重新开局&#39;); 
+      } 
+      hilog.info(DOMAIN, TAG, &#39;bootstrap finished, fallback=%{public}s&#39;, fallback ? &#39;true&#39; : &#39;false&#39;); 
+    } catch (err) { 
+      hilog.error(DOMAIN, TAG, &#39;bootstrap failed: %{public}s&#39;, JSON.stringify(err)); 
+      await this.installFallbackViewModel(); 
+      AppStorage.setOrCreate(&#39;restoreFallback&#39;, true); 
+      AppStorage.setOrCreate(&#39;isReady&#39;, true); 
+      this.showToast(&#39;存档异常，已重新开局&#39;); 
+    } 
+  } 
+ 
+  /** 末位兜底：Preferences 完全不可用时改用纯内存替身，保证应用仍可交互。 */ 
+  private async installFallbackViewModel(): Promise&lt;void&gt; { 
+    try { 
+      if (hasViewModel()) { 
+        return; 
+      } 
+      const repo: InMemoryStateRepository = new InMemoryStateRepository((): number =&gt; Date.now()); 
+      const vm: CaseViewModel = new CaseViewModel( 
+        repo, new CaseEngine(), (): number =&gt; Date.now(), this.createIdGen()); 
+      setViewModel(vm); 
+      await vm.restore(); 
+    } catch (err) { 
+      hilog.error(DOMAIN, TAG, &#39;installFallbackViewModel failed: %{public}s&#39;, JSON.stringify(err)); 
+    } 
+  } 
+ 
+  private createIdGen(): () =&gt; string { 
+    return (): string =&gt; { 
+      this.journalSeq += 1; 
+      return &#39;j-&#39; + Date.now().toString() + &#39;-&#39; + this.journalSeq.toString(); 
+    }; 
+  } 
+ 
+  private showToast(message: string): void { 
+    const stage: window.WindowStage | undefined = this.mainWindowStage; 
+    if (stage === undefined) { 
+      return; 
+    } 
+    try { 
+      const options: promptAction.ShowToastOptions = { message: message, duration: 2000 }; 
+      stage.getMainWindowSync().getUIContext().getPromptAction().showToast(options); 
+    } catch (err) { 
+      hilog.error(DOMAIN, TAG, &#39;showToast failed: %{public}s&#39;, JSON.stringify(err)); 
+    } 
+  } 
+ 
+  onWindowStageDestroy(): void { 
+    hilog.info(DOMAIN, TAG, &#39;%{public}s&#39;, &#39;Ability onWindowStageDestroy&#39;); 
+  } 
+ 
+  onForeground(): void { 
+    hilog.info(DOMAIN, TAG, &#39;%{public}s&#39;, &#39;Ability onForeground&#39;); 
+  } 
+ 
+  onBackground(): void { 
+    void this.flushPending(); 
+  } 
+ 
+  private async flushPending(): Promise&lt;void&gt; { 
+    try { 
+      if (hasViewModel()) { 
+        await getViewModel().flush(); 
+      } 
+    } catch (err) { 
+      hilog.error(DOMAIN, TAG, &#39;flush failed: %{public}s&#39;, JSON.stringify(err)); 
+    } 
+  } 
+} 
+
+              </pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
+      </el-main>
+      <el-footer align="middle" class="footer">
+        Code coverage generated by <el-link href="https://github.com/SMAT-Lab/bjc" type="primary"
+          target="_blank">bjc</el-link> at {{date}}
+      </el-footer>
+    </el-container>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {"date":"Sun Nov 15 2026 12:31:47 GMT+0800 (China Standard Time)","file":{"version":"bjc v1.0.0","versionCode":10000,"path":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles/entry/src/main/ets/entryability/EntryAbility.ets","hash":"3a1c96d164e04e37cec3efbcec0591e406f533147f1877b5f83a70df4b22f533","lineCnt":138,"count":0,"projectPath":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles","projectPathHash":"7e62e222253fa57eef9057adbbabd5292338b5f8a05fc98ff006f1c6dabd13cf","functions":[{"name":"EntryAbility.onCreate","count":0,"regions":[{"startLoc":{"line":27,"col":3},"endLoc":{"line":29,"col":4},"count":0,"ignored":0},{"startLoc":{"line":28,"col":5},"endLoc":{"line":29,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":0},{"name":"EntryAbility.onDestroy","count":0,"regions":[{"startLoc":{"line":31,"col":3},"endLoc":{"line":33,"col":4},"count":0,"ignored":0},{"startLoc":{"line":32,"col":5},"endLoc":{"line":33,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":1},{"name":"EntryAbility.onWindowStageCreate","count":0,"regions":[{"startLoc":{"line":35,"col":3},"endLoc":{"line":55,"col":4},"count":0,"ignored":0},{"startLoc":{"line":50,"col":9},"endLoc":{"line":52,"col":6},"count":0,"ignored":0},{"startLoc":{"line":52,"col":7},"endLoc":{"line":54,"col":6},"count":0,"ignored":0},{"startLoc":{"line":46,"col":7},"endLoc":{"line":48,"col":6},"count":0,"ignored":0},{"startLoc":{"line":43,"col":9},"endLoc":{"line":45,"col":8},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":2},{"name":"anonymous_0","count":0,"regions":[{"startLoc":{"line":40,"col":44},"endLoc":{"line":48,"col":6},"count":0,"ignored":0},{"startLoc":{"line":41,"col":21},"endLoc":{"line":45,"col":8},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":41,"col":11},"endLoc":{"line":41,"col":19},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":3},{"name":"EntryAbility.bootstrap","count":0,"regions":[{"startLoc":{"line":57,"col":3},"endLoc":{"line":78,"col":4},"count":0,"ignored":0},{"startLoc":{"line":58,"col":9},"endLoc":{"line":71,"col":6},"count":0,"ignored":0},{"startLoc":{"line":71,"col":7},"endLoc":{"line":77,"col":6},"count":0,"ignored":0},{"startLoc":{"line":67,"col":21},"endLoc":{"line":69,"col":8},"count":0,"ignored":0},{"startLoc":{"line":70,"col":7},"endLoc":{"line":71,"col":6},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":67,"col":11},"endLoc":{"line":67,"col":19},"trueCount":0,"falseCount":0,"group":[],"ignored":0},{"startLoc":{"line":70,"col":74},"endLoc":{"line":70,"col":101},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":4},{"name":"anonymous_1","count":0,"regions":[{"startLoc":{"line":61,"col":33},"endLoc":{"line":61,"col":57},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":5},{"name":"EntryAbility.installFallbackViewModel","count":0,"regions":[{"startLoc":{"line":81,"col":3},"endLoc":{"line":94,"col":4},"count":0,"ignored":0},{"startLoc":{"line":82,"col":9},"endLoc":{"line":91,"col":6},"count":0,"ignored":0},{"startLoc":{"line":86,"col":7},"endLoc":{"line":91,"col":6},"count":0,"ignored":0},{"startLoc":{"line":91,"col":7},"endLoc":{"line":93,"col":6},"count":0,"ignored":0},{"startLoc":{"line":83,"col":27},"endLoc":{"line":85,"col":8},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":83,"col":11},"endLoc":{"line":83,"col":25},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":6},{"name":"anonymous_2","count":0,"regions":[{"startLoc":{"line":86,"col":73},"endLoc":{"line":86,"col":97},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":7},{"name":"anonymous_3","count":0,"regions":[{"startLoc":{"line":88,"col":33},"endLoc":{"line":88,"col":57},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":8},{"name":"EntryAbility.createIdGen","count":0,"regions":[{"startLoc":{"line":96,"col":3},"endLoc":{"line":101,"col":4},"count":0,"ignored":0},{"startLoc":{"line":97,"col":5},"endLoc":{"line":101,"col":4},"count":0,"ignored":0},{"startLoc":{"line":99,"col":7},"endLoc":{"line":100,"col":6},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":9},{"name":"anonymous_4","count":0,"regions":[{"startLoc":{"line":96,"col":26},"endLoc":{"line":96,"col":38},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":10},{"name":"anonymous_5","count":0,"regions":[{"startLoc":{"line":97,"col":12},"endLoc":{"line":100,"col":6},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":11},{"name":"EntryAbility.showToast","count":0,"regions":[{"startLoc":{"line":103,"col":3},"endLoc":{"line":114,"col":4},"count":0,"ignored":0},{"startLoc":{"line":108,"col":9},"endLoc":{"line":111,"col":6},"count":0,"ignored":0},{"startLoc":{"line":105,"col":30},"endLoc":{"line":107,"col":6},"count":0,"ignored":0},{"startLoc":{"line":111,"col":7},"endLoc":{"line":113,"col":6},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":105,"col":9},"endLoc":{"line":105,"col":28},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":12},{"name":"EntryAbility.onWindowStageDestroy","count":0,"regions":[{"startLoc":{"line":116,"col":3},"endLoc":{"line":118,"col":4},"count":0,"ignored":0},{"startLoc":{"line":117,"col":5},"endLoc":{"line":118,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":13},{"name":"EntryAbility.onForeground","count":0,"regions":[{"startLoc":{"line":120,"col":3},"endLoc":{"line":122,"col":4},"count":0,"ignored":0},{"startLoc":{"line":121,"col":5},"endLoc":{"line":122,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":14},{"name":"EntryAbility.onBackground","count":0,"regions":[{"startLoc":{"line":124,"col":3},"endLoc":{"line":126,"col":4},"count":0,"ignored":0},{"startLoc":{"line":125,"col":5},"endLoc":{"line":126,"col":4},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":15},{"name":"EntryAbility.flushPending","count":0,"regions":[{"startLoc":{"line":128,"col":3},"endLoc":{"line":136,"col":4},"count":0,"ignored":0},{"startLoc":{"line":129,"col":9},"endLoc":{"line":133,"col":6},"count":0,"ignored":0},{"startLoc":{"line":133,"col":7},"endLoc":{"line":135,"col":6},"count":0,"ignored":0},{"startLoc":{"line":130,"col":27},"endLoc":{"line":132,"col":8},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":130,"col":11},"endLoc":{"line":130,"col":25},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":16}],"exeLine":{"0":11,"1":12,"2":13,"3":14,"4":15,"5":16,"6":17,"7":18,"8":20,"9":21,"10":23,"11":24,"12":25,"13":27,"14":28,"15":31,"16":32,"17":35,"18":36,"19":37,"20":38,"21":40,"22":41,"23":42,"24":43,"25":44,"26":46,"27":47,"28":50,"29":51,"30":52,"31":53,"32":57,"33":58,"34":59,"35":60,"36":61,"37":62,"38":63,"39":64,"40":65,"41":66,"42":67,"43":68,"44":70,"45":71,"46":72,"47":73,"48":74,"49":75,"50":76,"51":81,"52":82,"53":83,"54":84,"55":86,"56":87,"57":88,"58":89,"59":90,"60":91,"61":92,"62":96,"63":97,"64":98,"65":99,"66":103,"67":104,"68":105,"69":106,"70":108,"71":109,"72":110,"73":111,"74":112,"75":116,"76":117,"77":120,"78":121,"79":124,"80":125,"81":128,"82":129,"83":130,"84":131,"85":133,"86":134},"summary":{"lines":{"total":74,"covered":0,"pct":0,"executedLineCount":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,0,0,-1,0,0,0,0,0,-1,0,0,-1,-1,0,0,0,0,-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,-1,-1,-1,-1,0,0,0,0,-1,0,0,0,0,0,0,0,-1,-1,-1,0,0,0,0,-1,-1,-1,0,0,0,0,-1,0,0,0,0,0,-1,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,-1,-1,0,0,0,0,-1,0,0,-1,-1,-1,-1]},"functions":{"total":17,"covered":0,"pct":0},"branches":{"total":12,"covered":0,"pct":0}}},"title":"EntryAbility.ets.html","relativeHome":"../index.html"};
+    }
+  };
+
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+
+  window.onload = function () {
+    prettyPrint();
+  }
+</script>
+
+<style scoped>
+  table.coverage {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  table.coverage td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  table.coverage td.line-count {
+    width: 12%;
+    text-align: right;
+    padding: 0 5px 0 20px;
+  }
+
+  table.coverage td.line-coverage {
+    text-align: right;
+    padding-right: 10px;
+    min-width: 20px;
+  }
+
+  table.coverage td span.cline-any {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    height: 18px;
+  }
+
+  .low,
+  .cline-no {
+    background: #FCE1E5
+  }
+
+  .high,
+  .cline-yes {
+    background: rgb(230, 245, 208)
+  }
+
+  span.cline-neutral {
+    background: #eaeaea;
+  }
+
+  pre.prettyprint {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .el-main {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    overflow: auto;
+    padding: var(--el-main-padding)
+  }
+
+  .el-container {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .green {
+    color: var(--el-color-success);
+  }
+
+  .red {
+    color: var(--el-color-error);
+  }
+
+  .linenums li {
+    height: 18px;
+    line-height: 18px;
+  }
+
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: decimal
+  }
+
+  .el-col-5 {
+    max-width: 100%;
+  }
+
+  .el-col-3 {
+    max-width: 100%;
+  }
+
+</style>
+
+</html>

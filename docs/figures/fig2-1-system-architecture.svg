@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 830" width="1200" height="830">
+  <rect x="0" y="0" width="1200" height="830" fill="#FAF8F4"/>
+  <text x="40" y="42" font-family="PingFang SC, sans-serif" font-size="24" font-weight="bold" fill="#2F3E4E">图2.1 《雾灯档案》系统架构图</text>
+  <text x="40" y="70" font-family="PingFang SC, sans-serif" font-size="14" fill="#7A7A72">MVVM 分层 · 独立完成：图中每个模块均由本人设计、编码、集成与测试，无组队分工</text>
+
+  <rect x="40" y="92" width="1120" height="158" rx="12" fill="#E6F1FB" stroke="#85B7EB" stroke-width="1"/>
+  <text x="60" y="120" font-family="PingFang SC, sans-serif" font-size="16" font-weight="bold" fill="#0C447C">表示层 M6 · ArkUI 页面与组件（状态管理 V1）</text>
+  <rect x="894" y="102" width="246" height="24" rx="6" fill="#B4782D"/>
+  <text x="1017" y="119" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#FFFFFF">本层全部由本人负责</text>
+
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="60" y="134" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="164" y="154" text-anchor="middle" font-size="13" fill="#0C447C">Index 主容器</text>
+    <text x="164" y="172" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 加载态门禁</text>
+
+    <rect x="278" y="134" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="382" y="154" text-anchor="middle" font-size="13" fill="#0C447C">BriefView 简报</text>
+    <text x="382" y="172" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 阶段进度</text>
+
+    <rect x="496" y="134" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="600" y="154" text-anchor="middle" font-size="13" fill="#0C447C">ExploreView 探索</text>
+    <text x="600" y="172" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 分支交互</text>
+
+    <rect x="714" y="134" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="818" y="154" text-anchor="middle" font-size="13" fill="#0C447C">ClueBoardView 线索板</text>
+    <text x="818" y="172" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 关键提示</text>
+
+    <rect x="932" y="134" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="1036" y="154" text-anchor="middle" font-size="13" fill="#0C447C">DeductionView 推理</text>
+    <text x="1036" y="172" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 条件验证</text>
+
+    <rect x="60" y="190" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="164" y="210" text-anchor="middle" font-size="13" fill="#0C447C">JournalView 日志</text>
+    <text x="164" y="228" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 时间倒序</text>
+
+    <rect x="278" y="190" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="382" y="210" text-anchor="middle" font-size="13" fill="#0C447C">EndingView 结局</text>
+    <text x="382" y="228" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 分支回顾</text>
+
+    <rect x="496" y="190" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="600" y="210" text-anchor="middle" font-size="13" fill="#0C447C">HeaderBar 进度条</text>
+    <text x="600" y="228" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 属性动画</text>
+
+    <rect x="714" y="190" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="818" y="210" text-anchor="middle" font-size="13" fill="#0C447C">ClueCard 线索卡</text>
+    <text x="818" y="228" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 展开动画</text>
+
+    <rect x="932" y="190" width="208" height="46" rx="8" fill="#FFFFFF" stroke="#B5D4F4"/>
+    <text x="1036" y="210" text-anchor="middle" font-size="13" fill="#0C447C">EventCard 事件卡</text>
+    <text x="1036" y="228" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 门槛反馈</text>
+  </g>
+
+  <path d="M600 250 L600 273" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="612" y="266" font-family="PingFang SC, sans-serif" font-size="11" fill="#7A7A72">用户事件 / onChoose</text>
+
+  <rect x="40" y="276" width="1120" height="92" rx="12" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="1"/>
+  <text x="60" y="304" font-family="PingFang SC, sans-serif" font-size="16" font-weight="bold" fill="#085041">状态编排层 M5 · SSOT 与事件通信</text>
+  <rect x="894" y="286" width="246" height="24" rx="6" fill="#B4782D"/>
+  <text x="1017" y="303" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#FFFFFF">本层全部由本人负责</text>
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="60" y="316" width="352" height="40" rx="8" fill="#FFFFFF" stroke="#9FE1CB"/>
+    <text x="236" y="333" text-anchor="middle" font-size="13" fill="#085041">CaseViewModel（唯一权威 GameState）</text>
+    <text x="236" y="349" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 串行落盘 / 冷启动恢复</text>
+    <rect x="424" y="316" width="352" height="40" rx="8" fill="#FFFFFF" stroke="#9FE1CB"/>
+    <text x="600" y="333" text-anchor="middle" font-size="13" fill="#085041">AppContext 模块级单例</text>
+    <text x="600" y="349" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 依赖装配</text>
+    <rect x="788" y="316" width="352" height="40" rx="8" fill="#FFFFFF" stroke="#9FE1CB"/>
+    <text x="964" y="333" text-anchor="middle" font-size="13" fill="#085041">UiBus（AppStorage 广播）</text>
+    <text x="964" y="349" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 状态版本通知</text>
+  </g>
+
+  <path d="M600 368 L600 391" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="612" y="384" font-family="PingFang SC, sans-serif" font-size="11" fill="#7A7A72">evaluate / applyChoice（内存对象）</text>
+
+  <rect x="40" y="394" width="1120" height="108" rx="12" fill="#EEEDFE" stroke="#CECBF6" stroke-width="1"/>
+  <text x="60" y="422" font-family="PingFang SC, sans-serif" font-size="16" font-weight="bold" fill="#3C3489">纯业务逻辑层 M1 / M2 · 零 @ohos.* 依赖（可脱离设备单测）</text>
+  <rect x="894" y="404" width="246" height="24" rx="6" fill="#B4782D"/>
+  <text x="1017" y="421" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#FFFFFF">本层全部由本人负责</text>
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="60" y="436" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#CECBF6"/>
+    <text x="236" y="456" text-anchor="middle" font-size="13" fill="#3C3489">CaseEngine（纯函数）</text>
+    <text x="236" y="474" text-anchor="middle" font-size="10" fill="#534AB7">门槛 / effects / 推理验证 / 结局优先级</text>
+    <rect x="424" y="436" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#CECBF6"/>
+    <text x="600" y="456" text-anchor="middle" font-size="13" fill="#3C3489">Models（类型与白名单校验）</text>
+    <text x="600" y="474" text-anchor="middle" font-size="10" fill="#534AB7">GameState / sanitizeGameState / 深拷贝</text>
+    <rect x="788" y="436" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#CECBF6"/>
+    <text x="964" y="456" text-anchor="middle" font-size="13" fill="#3C3489">CaseCatalog（本地案件常量）</text>
+    <text x="964" y="474" text-anchor="middle" font-size="10" fill="#534AB7">3 场景 / 14 事件 / 9 线索 / 4 结局</text>
+  </g>
+
+  <path d="M600 502 L600 525" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="612" y="518" font-family="PingFang SC, sans-serif" font-size="11" fill="#7A7A72">save(GameState) / load()</text>
+
+  <rect x="40" y="528" width="1120" height="108" rx="12" fill="#FAEEDA" stroke="#FAC775" stroke-width="1"/>
+  <text x="60" y="556" font-family="PingFang SC, sans-serif" font-size="16" font-weight="bold" fill="#633806">数据持久层 M4 · 接口隔离系统能力</text>
+  <rect x="894" y="538" width="246" height="24" rx="6" fill="#B4782D"/>
+  <text x="1017" y="555" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#FFFFFF">本层全部由本人负责</text>
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="60" y="570" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#FAC775"/>
+    <text x="236" y="590" text-anchor="middle" font-size="13" fill="#633806">IStateRepository 接口</text>
+    <text x="236" y="608" text-anchor="middle" font-size="10" fill="#854F0B">load / save / clearAll / readBackup</text>
+    <rect x="424" y="570" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#FAC775"/>
+    <text x="600" y="590" text-anchor="middle" font-size="13" fill="#633806">StateRepository（Preferences 实现）</text>
+    <text x="600" y="608" text-anchor="middle" font-size="10" fill="#854F0B">唯一引用 @kit.ArkData · 损坏回落</text>
+    <rect x="788" y="570" width="352" height="52" rx="8" fill="#FFFFFF" stroke="#FAC775"/>
+    <text x="964" y="590" text-anchor="middle" font-size="13" fill="#633806">InMemoryStateRepository</text>
+    <text x="964" y="608" text-anchor="middle" font-size="10" fill="#854F0B">测试替身 · Mock 输入不依赖设备</text>
+  </g>
+
+  <path d="M600 636 L600 659" stroke="#7A7A72" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="40" y="662" width="1120" height="96" rx="12" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="1"/>
+  <text x="60" y="690" font-family="PingFang SC, sans-serif" font-size="16" font-weight="bold" fill="#444441">应用入口 M6 / 测试 M7 / 系统能力</text>
+  <rect x="894" y="672" width="246" height="24" rx="6" fill="#B4782D"/>
+  <text x="1017" y="689" text-anchor="middle" font-family="PingFang SC, sans-serif" font-size="12" fill="#FFFFFF">本层全部由本人负责</text>
+  <g font-family="PingFang SC, sans-serif">
+    <rect x="60" y="704" width="352" height="42" rx="8" fill="#FFFFFF" stroke="#B4B2A9"/>
+    <text x="236" y="722" text-anchor="middle" font-size="13" fill="#444441">EntryAbility 冷启动门禁 / 后台兜底</text>
+    <text x="236" y="738" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · await restore 后渲染</text>
+    <rect x="424" y="704" width="352" height="42" rx="8" fill="#FFFFFF" stroke="#B4B2A9"/>
+    <text x="600" y="722" text-anchor="middle" font-size="13" fill="#444441">12 条 Local Unit Test（@ohos/hypium）</text>
+    <text x="600" y="738" text-anchor="middle" font-size="10" fill="#B4782D">本人负责 · 正常/边界/异常</text>
+    <rect x="788" y="704" width="352" height="42" rx="8" fill="#FFFFFF" stroke="#B4B2A9"/>
+    <text x="964" y="722" text-anchor="middle" font-size="13" fill="#444441">@ohos.data.preferences 本地存储</text>
+    <text x="964" y="738" text-anchor="middle" font-size="10" fill="#7A7A72">HarmonyOS 系统能力（调用方本人）</text>
+  </g>
+
+  <text x="40" y="792" font-family="PingFang SC, sans-serif" font-size="12" fill="#7A7A72">数据流：界面事件 → ViewModel → 纯逻辑引擎 → 新 GameState → await 落盘 → AppStorage 广播 → @State 整体重新赋值 → 页面重绘</text>
+  <text x="40" y="814" font-family="PingFang SC, sans-serif" font-size="12" fill="#B4782D">图例：琥珀色标注 = 本人负责；蓝色 = 表示层；绿色 = 状态编排；紫色 = 纯逻辑（可被单测直接 import）；橙色 = 持久化；灰色 = 入口与测试</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#7A7A72" stroke-width="1.5" stroke-linecap="round"/>
+    </marker>
+  </defs>
+</svg>

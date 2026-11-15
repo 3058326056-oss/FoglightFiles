@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Import style -->
+  <link rel="stylesheet" href="../index.css" />
+  <link rel="stylesheet" href="../prettify.css" />
+  <!-- Import Vue 3 -->
+  <script src="../vue.global.prod.js"></script>
+  <!-- Import component library -->
+  <script src="../index.full.min.js"></script>
+  <script src="../prettify.js"></script>
+  <meta charset="UTF-8">
+  <title>Coverage</title>
+</head>
+
+<body>
+  <div id="app" class="common-layout">
+    <el-container>
+      <el-header>
+        <el-row :gutter="10">
+          <el-col :span="5">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <el-link type="primary" :href="relativeHome">
+                    <h2>&lt;</h2>
+                  </el-link>
+                </el-text></div>
+              <div><el-text class="mx-1 "><h2>{{title}}</h2></el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info"></el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.functions.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Functions</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.functions.covered}}/{{file.summary.functions.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.branches.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Branches</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.branches.covered}}/{{file.summary.branches.total}}</el-text></div>
+            </el-space>
+          </el-col>
+          <el-col :span="3">
+            <el-space :size="size" spacer="">
+              <div><el-text class="mx-1 ">
+                  <h2>{{file.summary.lines.pct}}%</h2>
+                </el-text></div>
+              <div><el-text class="mx-1 ">Lines</el-text></div>
+              <div><el-text class="mx-1 "
+                  type="info">{{file.summary.lines.covered}}/{{file.summary.lines.total}}</el-text></div>
+            </el-space>
+          </el-col>
+        </el-row>
+        <el-divider />
+      </el-header>
+      <el-main>
+        <el-row>
+        </el-row>
+        <pre>
+          <table class="coverage">
+            <tr>
+              <td class="line-count quiet">
+                <pre class="prettyprint lang-js">
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-yes">27x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">41x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">73x</span>
+<span class="cline-any cline-yes">438x</span>
+<span class="cline-any cline-yes">438x</span>
+<span class="cline-any cline-yes">73x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-yes">78x</span>
+<span class="cline-any cline-yes">78x</span>
+<span class="cline-any cline-yes">64x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+                </pre>
+        </td>
+        <td class="text">
+          <pre class="prettyprint linenums lang-js">
+/** 
+ * CaseCatalog.ets 
+ * M2 案件目录：3 个场景、14 个事件节点、9 条线索、4 个结局的本地常量数据。 
+ * 
+ * 全部为纯数据，零系统依赖、零网络、零 AI 生成。 
+ * 事件门槛（requiresClues / requiresFlags / forbiddenFlags）与选项 effects 
+ * 是「线索与选择真实改变后续事件」的唯一实现依据，与需求说明书第 7 章逐字对应。 
+ */ 
+ 
+import { 
+  Choice, Clue, Effect, EffectKind, Ending, EventNode, Scene, contains 
+} from &#39;./Models&#39;; 
+ 
+// ======================== 目录构造辅助 ======================== 
+ 
+function makeEffect(kind: EffectKind, key: string, boolValue: boolean, numValue: number): Effect { 
+  return { kind: kind, key: key, boolValue: boolValue, numValue: numValue }; 
+} 
+ 
+function addClue(id: string): Effect { 
+  return makeEffect(&#39;ADD_CLUE&#39;, id, false, 0); 
+} 
+ 
+function setFlag(key: string): Effect { 
+  return makeEffect(&#39;SET_FLAG&#39;, key, true, 0); 
+} 
+ 
+function addTrust(delta: number): Effect { 
+  return makeEffect(&#39;ADJUST_TRUST&#39;, &#39;&#39;, false, delta); 
+} 
+ 
+function lockEvent(id: string): Effect { 
+  return makeEffect(&#39;LOCK_EVENT&#39;, id, false, 0); 
+} 
+ 
+function unlockEvent(id: string): Effect { 
+  return makeEffect(&#39;UNLOCK_EVENT&#39;, id, false, 0); 
+} 
+ 
+function basicChoice(id: string, text: string, hint: string, effects: Effect[], resultText: string): Choice { 
+  return { 
+    id: id, text: text, hint: hint, 
+    requiresClues: [], requiresFlags: [], forbiddenFlags: [], 
+    effects: effects, resultText: resultText 
+  }; 
+} 
+ 
+function gatedChoice(id: string, text: string, hint: string, requiresClues: string[], 
+                     requiresFlags: string[], forbiddenFlags: string[], effects: Effect[], 
+                     resultText: string): Choice { 
+  return { 
+    id: id, text: text, hint: hint, 
+    requiresClues: requiresClues, requiresFlags: requiresFlags, forbiddenFlags: forbiddenFlags, 
+    effects: effects, resultText: resultText 
+  }; 
+} 
+ 
+function basicEvent(id: string, sceneId: string, title: string, body: string, choices: Choice[]): EventNode { 
+  return { 
+    id: id, sceneId: sceneId, title: title, body: body, 
+    altFlag: &#39;&#39;, altBody: &#39;&#39;, 
+    requiresClues: [], requiresFlags: [], forbiddenFlags: [], 
+    choices: choices 
+  }; 
+} 
+ 
+function gatedEvent(id: string, sceneId: string, title: string, body: string, 
+                    requiresClues: string[], requiresFlags: string[], forbiddenFlags: string[], 
+                    choices: Choice[], altFlag: string, altBody: string): EventNode { 
+  return { 
+    id: id, sceneId: sceneId, title: title, body: body, 
+    altFlag: altFlag, altBody: altBody, 
+    requiresClues: requiresClues, requiresFlags: requiresFlags, forbiddenFlags: forbiddenFlags, 
+    choices: choices 
+  }; 
+} 
+ 
+// ======================== 3 个可探索场景 ======================== 
+ 
+export const SCENES: Scene[] = [ 
+  { 
+    id: &#39;S1&#39;, name: &#39;旧馆 · 阅览室&#39;, subtitle: &#39;纸页与借书章&#39;, 
+    description: &#39;校庆前夜的旧馆只亮着两盏灯。台账、过期特刊和被人夹进书里的纸条，都留着没擦干净的痕迹。&#39;, 
+    eventIds: [&#39;E01&#39;, &#39;E02&#39;, &#39;E03&#39;, &#39;E04&#39;, &#39;E05&#39;] 
+  }, 
+  { 
+    id: &#39;S2&#39;, name: &#39;钟楼 · 活动室&#39;, subtitle: &#39;断电的第七盏灯&#39;, 
+    description: &#39;21:40 这里停了电。展台上只剩一圈灰印，值班表被红笔改过，还有人不太愿意开口。&#39;, 
+    eventIds: [&#39;E06&#39;, &#39;E07&#39;, &#39;E08&#39;, &#39;E09&#39;] 
+  }, 
+  { 
+    id: &#39;S3&#39;, name: &#39;连廊 · 配电间&#39;, subtitle: &#39;十四分钟的空白&#39;, 
+    description: &#39;总闸、监控日志、一路延伸的湿鞋印，以及一份没被公示过的备份名单。&#39;, 
+    eventIds: [&#39;E10&#39;, &#39;E11&#39;, &#39;E12&#39;, &#39;E13&#39;, &#39;E14&#39;] 
+  } 
+]; 
+ 
+// ======================== 9 条线索（★ 为定案线索） ======================== 
+ 
+export const CLUES: Clue[] = [ 
+  { 
+    id: &#39;C1&#39;, title: &#39;值日证借阅记录&#39;, summary: &#39;21:05 有人借走《校史图册》&#39;, 
+    detail: &#39;旧馆台账上，21:05 的借阅用社员值日证登记，登记人只写了一个「社」字。图册里有历年评优名单的附录。&#39;, 
+    sceneId: &#39;S1&#39;, tag: &#39;人物&#39;, weight: 1, fromEventId: &#39;E02&#39; 
+  }, 
+  { 
+    id: &#39;C2&#39;, title: &#39;特刊上的奖杯照片&#39;, summary: &#39;底座有一道斜划痕&#39;, 
+    detail: &#39;去年校庆特刊的合影里，奖杯底座有一道从左下到右上的斜划痕；社团群「失窃前」的照片里却没有。&#39;, 
+    sceneId: &#39;S1&#39;, tag: &#39;物证&#39;, weight: 1, fromEventId: &#39;E03&#39; 
+  }, 
+  { 
+    id: &#39;C3&#39;, title: &#39;匿名便签&#39;, summary: &#39;红字：「21:40 别开灯」&#39;, 
+    detail: &#39;夹在《校史图册》里的便签只有一行红字，笔迹与被涂改的值班表出自同一支笔。&#39;, 
+    sceneId: &#39;S1&#39;, tag: &#39;时间&#39;, weight: 2, fromEventId: &#39;E04&#39; 
+  }, 
+  { 
+    id: &#39;C4&#39;, title: &#39;被涂改的值班表&#39;, summary: &#39;当晚值班人由林改为周&#39;, 
+    detail: &#39;活动室门口的值班表上，「林」被划掉改成「周」，改动用的是红笔，纸张背面有重描压痕。&#39;, 
+    sceneId: &#39;S2&#39;, tag: &#39;人物&#39;, weight: 1, fromEventId: &#39;E06&#39; 
+  }, 
+  { 
+    id: &#39;C5&#39;, title: &#39;★ 奖杯送修回执&#39;, summary: &#39;奖杯三天前已送修&#39;, 
+    detail: &#39;社团经费夹最后一页的回执写明：奖杯因底座开裂于三天前送修，签收人一栏是社长。所谓「失窃」并不成立。&#39;, 
+    sceneId: &#39;S2&#39;, tag: &#39;物证&#39;, weight: 3, fromEventId: &#39;E09&#39; 
+  }, 
+  { 
+    id: &#39;C6&#39;, title: &#39;配电箱手动跳闸痕迹&#39;, summary: &#39;不是故障，是人为拉闸&#39;, 
+    detail: &#39;总闸处于「关」位，闸柄上有新鲜指印，保险丝完好。断电由人为拉闸造成。&#39;, 
+    sceneId: &#39;S3&#39;, tag: &#39;现场&#39;, weight: 1, fromEventId: &#39;E10&#39; 
+  }, 
+  { 
+    id: &#39;C7&#39;, title: &#39;★ 监控日志断点&#39;, summary: &#39;21:38–21:52 画面中断&#39;, 
+    detail: &#39;监控日志显示 21:38 画面中断、21:52 恢复，中间 14 分钟恰好覆盖便签上的时间。导出完整片段可固定时间线。&#39;, 
+    sceneId: &#39;S3&#39;, tag: &#39;时间&#39;, weight: 3, fromEventId: &#39;E11&#39; 
+  }, 
+  { 
+    id: &#39;C8&#39;, title: &#39;★ 备份推荐名单&#39;, summary: &#39;与公示名单相差一人&#39;, 
+    detail: &#39;连廊消防门后找回的备份稿里，第九行是另一个名字；公示版在断电当晚被替换过。&#39;, 
+    sceneId: &#39;S3&#39;, tag: &#39;动机&#39;, weight: 3, fromEventId: &#39;E13&#39; 
+  }, 
+  { 
+    id: &#39;C9&#39;, title: &#39;湿伞与鞋印&#39;, summary: &#39;水迹从活动室延伸到连廊&#39;, 
+    detail: &#39;21:38 前后下过一阵急雨。湿鞋印从活动室一路延伸到连廊尽头的消防门，门后是通往旧馆的捷径。&#39;, 
+    sceneId: &#39;S3&#39;, tag: &#39;现场&#39;, weight: 1, fromEventId: &#39;E12&#39; 
+  } 
+]; 
+ 
+// ======================== 14 个事件节点 ======================== 
+ 
+export const EVENTS: EventNode[] = [ 
+  // ---------- S1 旧馆 · 阅览室 ---------- 
+  basicEvent(&#39;E01&#39;, &#39;S1&#39;, &#39;深夜的委托&#39;, 
+    &#39;主编把一张便条推到你面前：钟楼活动室 21:40 断电，校庆奖杯和评优推荐名单一起不见了。天亮前，他要一个能刊印的结论。走廊尽头，第七盏灯还亮着。&#39;, 
+    [ 
+      basicChoice(&#39;E01-A&#39;, &#39;先去借阅台查记录&#39;, &#39;记录不会撒谎，先从纸面入手&#39;, 
+        [addClue(&#39;C1&#39;), setFlag(&#39;accepted&#39;), setFlag(&#39;registry_checked&#39;), addTrust(5)], 
+        &#39;21:05 的借阅记录用的是社员值日证，借的是《校史图册》——那本书的附录里有历年评优名单。线索 +1。&#39;), 
+      basicChoice(&#39;E01-B&#39;, &#39;先找当晚值班的同学&#39;, &#39;先建立信任，也许能问到更多&#39;, 
+        [setFlag(&#39;accepted&#39;), setFlag(&#39;asked_first&#39;), addTrust(10)], 
+        &#39;值班同学只说了一句「那晚灯灭得特别整齐」，便不肯再讲。你决定从别处找证据，信任 +10。&#39;) 
+    ]), 
+ 
+  gatedEvent(&#39;E02&#39;, &#39;S1&#39;, &#39;借阅台&#39;, 
+    &#39;台账摊在桌上，最后几行墨迹还没干透。管理员说今晚只借出去一本书。&#39;, 
+    [], [&#39;accepted&#39;], [], 
+    [ 
+      basicChoice(&#39;E02-A&#39;, &#39;逐页核对值日证&#39;, &#39;仔细看编号，别漏掉涂改&#39;, 
+        [addClue(&#39;C1&#39;), setFlag(&#39;registry_checked&#39;)], 
+        &#39;21:05 那一行用的是值日证，登记人只写了一个「社」字，编号末尾被重描过。&#39;), 
+      basicChoice(&#39;E02-B&#39;, &#39;只拍一张照片&#39;, &#39;先存证，回头再看&#39;, 
+        [addClue(&#39;C1&#39;)], 
+        &#39;你草草拍下台账，没注意角落里被涂改的编号。线索 +1，但少了可核对的细节。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E03&#39;, &#39;S1&#39;, &#39;校庆特刊堆&#39;, 
+    &#39;窗边堆着近五年的校庆特刊，最上面一本被翻得卷了角。&#39;, 
+    [], [&#39;accepted&#39;], [], 
+    [ 
+      basicChoice(&#39;E03-A&#39;, &#39;翻到奖杯照片那一页&#39;, &#39;合影里可能有展台的细节&#39;, 
+        [addClue(&#39;C2&#39;), setFlag(&#39;photo_seen&#39;)], 
+        &#39;去年合影里，奖杯底座有一道斜划痕；社团群那张「失窃前」的照片里却没有。线索 +1。&#39;), 
+      basicChoice(&#39;E03-B&#39;, &#39;略过旧刊物&#39;, &#39;时间不多，先去别处&#39;, 
+        [], 
+        &#39;你把刊物堆推回原处。有些线索一旦错过，就再也补不回来。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E04&#39;, &#39;S1&#39;, &#39;夹在书里的便签&#39;, 
+    &#39;《校史图册》的附录页里夹着一张对折的纸，露出红色墨迹的一角。&#39;, 
+    [&#39;C2&#39;], [], [], 
+    [ 
+      basicChoice(&#39;E04-A&#39;, &#39;收进证物袋&#39;, &#39;先保护来源，别惊动别人&#39;, 
+        [addClue(&#39;C3&#39;), setFlag(&#39;note_kept&#39;), addTrust(5)], 
+        &#39;便签上只有一行红字：「21:40 别开灯」。你把它单独夹进采访本，没有声张。&#39;), 
+      gatedChoice(&#39;E04-B&#39;, &#39;当场念给大家听&#39;, &#39;公开信息，但证人可能改口&#39;, 
+        [], [], [], 
+        [addClue(&#39;C3&#39;), setFlag(&#39;exposed_note&#39;), lockEvent(&#39;E09&#39;), addTrust(-10)], 
+        &#39;你把便签念了出来。阅览室安静了一瞬，有人立刻起身往钟楼方向走。信任 -10，一条取证路径被关闭。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E05&#39;, &#39;S1&#39;, &#39;林学姐的证词&#39;, 
+    &#39;林学姐在靠窗的位置收拾书包，看见你手里的借阅台账，动作停了一下。&#39;, 
+    [&#39;C1&#39;], [], [], 
+    [ 
+      gatedChoice(&#39;E05-A&#39;, &#39;出示借书记录，请她解释&#39;, &#39;她与当晚值班表有关&#39;, 
+        [], [], [&#39;exposed_note&#39;], 
+        [setFlag(&#39;trust_lin&#39;), addTrust(15)], 
+        &#39;她盯着记录看了很久，说那本图册不是她借的，并答应把当晚看见的事写下来。&#39;), 
+      gatedChoice(&#39;E05-B&#39;, &#39;先不追问，答应替她保密&#39;, &#39;保住证人的名字&#39;, 
+        [], [], [&#39;exposed_note&#39;], 
+        [setFlag(&#39;protected_witness&#39;), setFlag(&#39;witness_full&#39;), addTrust(10)], 
+        &#39;她松了口气，低声说：「名单改过，但别写我的名字。」你点了点头。&#39;), 
+      gatedChoice(&#39;E05-C&#39;, &#39;便签公开后，先道歉&#39;, &#39;此时她已经不愿再谈&#39;, 
+        [], [&#39;exposed_note&#39;], [], 
+        [setFlag(&#39;witness_recanted&#39;)], 
+        &#39;道歉没能挽回，她只重复「我不记得了」。证词链断了。&#39;) 
+    ], &#39;exposed_note&#39;, 
+    &#39;林学姐把帽子压低了：「便签的事已经传开了，我什么都不记得。」她改了口，只留下一句「别再问我」。&#39;), 
+ 
+  // ---------- S2 钟楼 · 活动室 ---------- 
+  gatedEvent(&#39;E06&#39;, &#39;S2&#39;, &#39;被涂改的值班表&#39;, 
+    &#39;门后贴着本周值班表，21:40 那一格被红笔改过，纸面还留着重描的压痕。&#39;, 
+    [], [&#39;accepted&#39;], [], 
+    [ 
+      basicChoice(&#39;E06-A&#39;, &#39;核对涂改痕迹&#39;, &#39;把笔迹和便签对一下&#39;, 
+        [addClue(&#39;C4&#39;), setFlag(&#39;roster_checked&#39;)], 
+        &#39;当晚值班人从「林」改成「周」，改动用的红笔和便签是同一支。线索 +1。&#39;), 
+      basicChoice(&#39;E06-B&#39;, &#39;直接去问社长&#39;, &#39;也许能当场得到解释&#39;, 
+        [addClue(&#39;C4&#39;), setFlag(&#39;confronted_president&#39;), addTrust(-5)], 
+        &#39;社长笑了笑说「排班表谁都能改」，然后把门带上了。线索 +1，信任 -5。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E07&#39;, &#39;S2&#39;, &#39;奖杯底座&#39;, 
+    &#39;展台空着，只留下一圈浅灰的圆形印子。旁边有人小声说「刚才还在」。&#39;, 
+    [&#39;C2&#39;], [], [], 
+    [ 
+      basicChoice(&#39;E07-A&#39;, &#39;比对照片上的划痕&#39;, &#39;把物证和特刊合影放在一起看&#39;, 
+        [setFlag(&#39;scratch_matched&#39;)], 
+        &#39;灰印尺寸与照片里的底座一致，但划痕方向相反——这里摆过的，是另一个底座。&#39;), 
+      basicChoice(&#39;E07-B&#39;, &#39;认定奖杯就是被偷了&#39;, &#39;先按最直觉的结论记下&#39;, 
+        [setFlag(&#39;assumed_theft&#39;)], 
+        &#39;你先按「失窃」写下结论。这个判断会一直影响后面的推理。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E08&#39;, &#39;S2&#39;, &#39;目击者小周&#39;, 
+    &#39;小周抱着一摞社团经费夹站在门口，看见你时往后退了半步。&#39;, 
+    [&#39;C3&#39;], [], [], 
+    [ 
+      gatedChoice(&#39;E08-A&#39;, &#39;答应不把他的名字写进稿子&#39;, &#39;保护证人，换取材料&#39;, 
+        [], [], [&#39;exposed_note&#39;], 
+        [setFlag(&#39;protected_witness&#39;), addTrust(10)], 
+        &#39;他犹豫了一下，把经费夹递过来：「你自己看，别说我给的。」&#39;), 
+      gatedChoice(&#39;E08-B&#39;, &#39;劝他说出全部，并答应不署名&#39;, &#39;把时间线问清楚&#39;, 
+        [], [], [&#39;exposed_note&#39;], 
+        [setFlag(&#39;witness_full&#39;), setFlag(&#39;protected_witness&#39;), addTrust(5)], 
+        &#39;他说 21:38 有人从活动室往连廊走，手里拿着一把湿伞。&#39;), 
+      gatedChoice(&#39;E08-C&#39;, &#39;便签公开后，只能先离开&#39;, &#39;他不再愿意开口&#39;, 
+        [], [&#39;exposed_note&#39;], [], 
+        [setFlag(&#39;witness_recanted&#39;)], 
+        &#39;他摇头关上了门。你失去了一条通向经费单据的路。&#39;) 
+    ], &#39;exposed_note&#39;, 
+    &#39;小周看见你就往后退：「便签的事我听说了，我什么都没看见。」他抱紧了经费夹。&#39;), 
+ 
+  gatedEvent(&#39;E09&#39;, &#39;S2&#39;, &#39;经费单据&#39;, 
+    &#39;经费夹里是这学期的报销单，最后一页似乎还夹着一张不同颜色的回执。&#39;, 
+    [&#39;C4&#39;], [&#39;protected_witness&#39;], [], 
+    [ 
+      basicChoice(&#39;E09-A&#39;, &#39;翻到送修回执&#39;, &#39;不同颜色的那张纸可能是关键&#39;, 
+        [addClue(&#39;C5&#39;), setFlag(&#39;repair_found&#39;)], 
+        &#39;三天前，奖杯因底座开裂送修，签收人是社长。所谓「失窃」，从一开始就不成立。★定案线索 +1。&#39;), 
+      basicChoice(&#39;E09-B&#39;, &#39;只看支出总额&#39;, &#39;时间不多，先记个数&#39;, 
+        [], 
+        &#39;你合上经费夹，没注意夹在最后一页的回执。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  // ---------- S3 连廊 · 配电间 ---------- 
+  gatedEvent(&#39;E10&#39;, &#39;S3&#39;, &#39;配电箱&#39;, 
+    &#39;配电间的门虚掩着，总闸停在「关」位，地面有一小摊雨水。&#39;, 
+    [], [&#39;accepted&#39;], [], 
+    [ 
+      basicChoice(&#39;E10-A&#39;, &#39;查看手动跳闸痕迹&#39;, &#39;确认是故障还是人为&#39;, 
+        [addClue(&#39;C6&#39;), setFlag(&#39;power_checked&#39;)], 
+        &#39;总闸被人为拉下，闸柄上还留着新鲜指印，保险丝完好。不是故障。线索 +1。&#39;), 
+      basicChoice(&#39;E10-B&#39;, &#39;只看电闸状态&#39;, &#39;记下结论就走&#39;, 
+        [addClue(&#39;C6&#39;)], 
+        &#39;电闸处在「关」位，你记了下来，但没看出更多。线索 +1。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E11&#39;, &#39;S3&#39;, &#39;监控日志&#39;, 
+    &#39;值班室的屏幕停在日志页，21:38 之后是一整段空白。&#39;, 
+    [&#39;C6&#39;], [], [], 
+    [ 
+      basicChoice(&#39;E11-A&#39;, &#39;导出 21:30–22:00 片段&#39;, &#39;把断点前后的画面连起来&#39;, 
+        [addClue(&#39;C7&#39;), setFlag(&#39;timeline_fixed&#39;)], 
+        &#39;21:38 中断、21:52 恢复，中间 14 分钟恰好覆盖便签上的时间。时间线被固定下来。★定案线索 +1。&#39;), 
+      basicChoice(&#39;E11-B&#39;, &#39;只记下断点&#39;, &#39;先记一个时间点&#39;, 
+        [addClue(&#39;C7&#39;)], 
+        &#39;你写下「21:38 断」，却没有把前后片段连起来。★线索 +1，但时间线未闭合。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E12&#39;, &#39;S3&#39;, &#39;湿伞与鞋印&#39;, 
+    &#39;连廊地砖上有一串没干的水迹，从活动室方向一路往东。&#39;, 
+    [&#39;C7&#39;], [], [], 
+    [ 
+      basicChoice(&#39;E12-A&#39;, &#39;沿着水迹走到连廊尽头&#39;, &#39;看看它停在哪里&#39;, 
+        [addClue(&#39;C9&#39;), setFlag(&#39;trail_followed&#39;)], 
+        &#39;水迹止于东侧消防门，门后是通往旧馆的捷径。线索 +1。&#39;), 
+      basicChoice(&#39;E12-B&#39;, &#39;拍照存档即可&#39;, &#39;留个证据&#39;, 
+        [addClue(&#39;C9&#39;)], 
+        &#39;一双湿鞋印，从活动室延伸到连廊。线索 +1。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E13&#39;, &#39;S3&#39;, &#39;备份推荐名单&#39;, 
+    &#39;消防门后的纸箱里压着一份没盖章的推荐名单备份稿，和公示版页数一样。&#39;, 
+    [&#39;C7&#39;], [], [], 
+    [ 
+      basicChoice(&#39;E13-A&#39;, &#39;逐行比对公示名单&#39;, &#39;差异可能就是动机&#39;, 
+        [addClue(&#39;C8&#39;), setFlag(&#39;names_diff&#39;)], 
+        &#39;备份稿第九行是另一个名字，公示版在断电当晚被替换过。★定案线索 +1。&#39;), 
+      basicChoice(&#39;E13-B&#39;, &#39;先收进采访包&#39;, &#39;回去再细看&#39;, 
+        [addClue(&#39;C8&#39;)], 
+        &#39;你把备份稿收好，暂时没细看。★线索 +1。&#39;) 
+    ], &#39;&#39;, &#39;&#39;), 
+ 
+  gatedEvent(&#39;E14&#39;, &#39;S3&#39;, &#39;第七盏灯&#39;, 
+    &#39;钟楼走廊的第七盏灯亮着。所有纸片摊在地上，只差把它们排成一条时间线。&#39;, 
+    [&#39;C5&#39;, &#39;C8&#39;], [&#39;timeline_fixed&#39;], [], 
+    [ 
+      basicChoice(&#39;E14-A&#39;, &#39;还原 21:40 的完整时间线&#39;, &#39;把线索排成可刊印的顺序&#39;, 
+        [setFlag(&#39;case_ready&#39;), addTrust(20)], 
+        &#39;21:05 借图册查旧名单 → 21:38 拉闸 → 21:40 换名单、把送修的奖杯说成失窃 → 21:52 恢复供电。证据链闭合。&#39;), 
+      basicChoice(&#39;E14-B&#39;, &#39;把线索交给编辑部&#39;, &#39;让推理台做最后判断&#39;, 
+        [setFlag(&#39;case_ready&#39;), addTrust(5)], 
+        &#39;你把材料摞齐。够不够刊印，要看推理台上的判断。&#39;) 
+    ], &#39;&#39;, &#39;&#39;) 
+]; 
+ 
+// ======================== 4 个结局 ======================== 
+ 
+export const ENDINGS: Ending[] = [ 
+  { 
+    id: &#39;END_TRUTH&#39;, title: &#39;灯下的署名&#39;, subtitle: &#39;真相 · 证据链闭合&#39;, 
+    body: &#39;稿子在第二天的校刊上印了出来：奖杯三天前已送修，所谓失窃只是为了让那份被换掉的推荐名单显得像一场意外。21:38 有人拉下总闸，21:40 换走名单，21:52 恢复供电。你在文末写了社长的名字，也附上了送修回执、监控日志与备份稿三份证据。第七盏灯在天亮前熄灭，这次是有人主动关的。&#39;, 
+    tone: &#39;truth&#39; 
+  }, 
+  { 
+    id: &#39;END_PARTIAL&#39;, title: &#39;半亮的路灯&#39;, subtitle: &#39;残缺 · 证据链有缺口&#39;, 
+    body: &#39;你交出了一份方向大致正确的稿子，但缺了最关键的一两块拼图：没有送修回执、时间线没闭合，或名单差异没被逐行核对。主编读完只说了一句「先压着吧」。钟楼的灯修好了，可走廊尽头那一段，仍旧半明半暗。&#39;, 
+    tone: &#39;partial&#39; 
+  }, 
+  { 
+    id: &#39;END_MISJUDGE&#39;, title: &#39;错指的人&#39;, subtitle: &#39;误判 · 指认对象错误&#39;, 
+    body: &#39;你把名字写错了。稿子见报的当天，被指认的同学拿着值班表和借阅台账来找你，一条条说明自己那晚在哪里。主编撤回了稿件，你在更正启事里只写了「证据不足」。走廊的灯照常亮着，只是再没人愿意替你作证。&#39;, 
+    tone: &#39;misjudge&#39; 
+  }, 
+  { 
+    id: &#39;END_COVER&#39;, title: &#39;没有寄出的稿子&#39;, subtitle: &#39;断裂 · 证人改口&#39;, 
+    body: &#39;那张便签被念出声之后，证人一个接一个改了口。等你终于拼齐物证，愿意在记录上署名的人已经没有了。稿子写完了，却始终没有寄出。多年以后你仍记得那晚：第七盏灯亮着，只是没人再抬头看它。&#39;, 
+    tone: &#39;cover&#39; 
+  } 
+]; 
+ 
+// ======================== 目录查询 ======================== 
+ 
+export function findScene(id: string): Scene | null { 
+  for (let i = 0; i &lt; SCENES.length; i++) { 
+    if (SCENES[i].id === id) { 
+      return SCENES[i]; 
+    } 
+  } 
+  return null; 
+} 
+ 
+export function findClue(id: string): Clue | null { 
+  for (let i = 0; i &lt; CLUES.length; i++) { 
+    if (CLUES[i].id === id) { 
+      return CLUES[i]; 
+    } 
+  } 
+  return null; 
+} 
+ 
+export function findEvent(id: string): EventNode | null { 
+  for (let i = 0; i &lt; EVENTS.length; i++) { 
+    if (EVENTS[i].id === id) { 
+      return EVENTS[i]; 
+    } 
+  } 
+  return null; 
+} 
+ 
+export function findChoice(event: EventNode, id: string): Choice | null { 
+  for (let i = 0; i &lt; event.choices.length; i++) { 
+    if (event.choices[i].id === id) { 
+      return event.choices[i]; 
+    } 
+  } 
+  return null; 
+} 
+ 
+export function findEnding(id: string): Ending | null { 
+  for (let i = 0; i &lt; ENDINGS.length; i++) { 
+    if (ENDINGS[i].id === id) { 
+      return ENDINGS[i]; 
+    } 
+  } 
+  return null; 
+} 
+ 
+export function eventsOfScene(sceneId: string): EventNode[] { 
+  const out: EventNode[] = []; 
+  for (let i = 0; i &lt; EVENTS.length; i++) { 
+    if (EVENTS[i].sceneId === sceneId) { 
+      out.push(EVENTS[i]); 
+    } 
+  } 
+  return out; 
+} 
+ 
+export function clueTitle(id: string): string { 
+  const clue: Clue | null = findClue(id); 
+  return clue === null ? id : clue.title; 
+} 
+ 
+export function hasClue(stateClues: string[], id: string): boolean { 
+  return contains(stateClues, id); 
+} 
+
+              </pre>
+        </td>
+        </tr>
+        </table>
+        </pre>
+      </el-main>
+      <el-footer align="middle" class="footer">
+        Code coverage generated by <el-link href="https://github.com/SMAT-Lab/bjc" type="primary"
+          target="_blank">bjc</el-link> at {{date}}
+      </el-footer>
+    </el-container>
+  </div>
+</body>
+
+<script>
+  const App = {
+    data() {
+      return {"date":"Sun Nov 15 2026 12:31:47 GMT+0800 (China Standard Time)","file":{"version":"bjc v1.0.0","versionCode":10000,"path":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles/entry/src/main/ets/model/CaseCatalog.ets","hash":"afbec7d0d7c084a5104562b0f09096afdc87a57725b144a4d626f0822a652e6b","lineCnt":427,"count":0,"projectPath":"/Users/yushu/WorkBuddy/spaces/2026_11_15_11-55-30/FoglightFiles","projectPathHash":"7e62e222253fa57eef9057adbbabd5292338b5f8a05fc98ff006f1c6dabd13cf","functions":[{"name":"makeEffect","count":56,"regions":[{"startLoc":{"line":16,"col":1},"endLoc":{"line":18,"col":2},"count":56,"ignored":0},{"startLoc":{"line":17,"col":3},"endLoc":{"line":18,"col":2},"count":56,"ignored":0}],"branches":[],"ignored":0,"index":0},{"name":"addClue","count":17,"regions":[{"startLoc":{"line":20,"col":1},"endLoc":{"line":22,"col":2},"count":17,"ignored":0},{"startLoc":{"line":21,"col":3},"endLoc":{"line":22,"col":2},"count":17,"ignored":0}],"branches":[],"ignored":0,"index":1},{"name":"setFlag","count":27,"regions":[{"startLoc":{"line":24,"col":1},"endLoc":{"line":26,"col":2},"count":27,"ignored":0},{"startLoc":{"line":25,"col":3},"endLoc":{"line":26,"col":2},"count":27,"ignored":0}],"branches":[],"ignored":0,"index":2},{"name":"addTrust","count":11,"regions":[{"startLoc":{"line":28,"col":1},"endLoc":{"line":30,"col":2},"count":11,"ignored":0},{"startLoc":{"line":29,"col":3},"endLoc":{"line":30,"col":2},"count":11,"ignored":0}],"branches":[],"ignored":0,"index":3},{"name":"lockEvent","count":1,"regions":[{"startLoc":{"line":32,"col":1},"endLoc":{"line":34,"col":2},"count":1,"ignored":0},{"startLoc":{"line":33,"col":3},"endLoc":{"line":34,"col":2},"count":1,"ignored":0}],"branches":[],"ignored":0,"index":4},{"name":"unlockEvent","count":0,"regions":[{"startLoc":{"line":36,"col":1},"endLoc":{"line":38,"col":2},"count":0,"ignored":0},{"startLoc":{"line":37,"col":3},"endLoc":{"line":38,"col":2},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":5},{"name":"basicChoice","count":23,"regions":[{"startLoc":{"line":40,"col":1},"endLoc":{"line":46,"col":2},"count":23,"ignored":0},{"startLoc":{"line":41,"col":3},"endLoc":{"line":46,"col":2},"count":23,"ignored":0}],"branches":[],"ignored":0,"index":6},{"name":"gatedChoice","count":7,"regions":[{"startLoc":{"line":48,"col":1},"endLoc":{"line":56,"col":2},"count":7,"ignored":0},{"startLoc":{"line":51,"col":3},"endLoc":{"line":56,"col":2},"count":7,"ignored":0}],"branches":[],"ignored":0,"index":7},{"name":"basicEvent","count":1,"regions":[{"startLoc":{"line":58,"col":1},"endLoc":{"line":65,"col":2},"count":1,"ignored":0},{"startLoc":{"line":59,"col":3},"endLoc":{"line":65,"col":2},"count":1,"ignored":0}],"branches":[],"ignored":0,"index":8},{"name":"gatedEvent","count":13,"regions":[{"startLoc":{"line":67,"col":1},"endLoc":{"line":76,"col":2},"count":13,"ignored":0},{"startLoc":{"line":70,"col":3},"endLoc":{"line":76,"col":2},"count":13,"ignored":0}],"branches":[],"ignored":0,"index":9},{"name":"findScene","count":0,"regions":[{"startLoc":{"line":364,"col":1},"endLoc":{"line":371,"col":2},"count":0,"ignored":0},{"startLoc":{"line":365,"col":3},"endLoc":{"line":369,"col":4},"count":0,"ignored":0},{"startLoc":{"line":366,"col":30},"endLoc":{"line":368,"col":6},"count":0,"ignored":0},{"startLoc":{"line":370,"col":3},"endLoc":{"line":371,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":366,"col":9},"endLoc":{"line":366,"col":28},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":10},{"name":"findClue","count":7,"regions":[{"startLoc":{"line":373,"col":1},"endLoc":{"line":380,"col":2},"count":7,"ignored":0},{"startLoc":{"line":374,"col":3},"endLoc":{"line":378,"col":4},"count":41,"ignored":0},{"startLoc":{"line":375,"col":29},"endLoc":{"line":377,"col":6},"count":7,"ignored":0},{"startLoc":{"line":379,"col":3},"endLoc":{"line":380,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":375,"col":9},"endLoc":{"line":375,"col":27},"trueCount":7,"falseCount":34,"group":[],"ignored":0}],"ignored":0,"index":11},{"name":"findEvent","count":73,"regions":[{"startLoc":{"line":382,"col":1},"endLoc":{"line":389,"col":2},"count":73,"ignored":0},{"startLoc":{"line":383,"col":3},"endLoc":{"line":387,"col":4},"count":438,"ignored":0},{"startLoc":{"line":384,"col":30},"endLoc":{"line":386,"col":6},"count":73,"ignored":0},{"startLoc":{"line":388,"col":3},"endLoc":{"line":389,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":384,"col":9},"endLoc":{"line":384,"col":28},"trueCount":73,"falseCount":365,"group":[],"ignored":0}],"ignored":0,"index":12},{"name":"findChoice","count":65,"regions":[{"startLoc":{"line":391,"col":1},"endLoc":{"line":398,"col":2},"count":65,"ignored":0},{"startLoc":{"line":392,"col":3},"endLoc":{"line":396,"col":4},"count":78,"ignored":0},{"startLoc":{"line":393,"col":37},"endLoc":{"line":395,"col":6},"count":64,"ignored":0},{"startLoc":{"line":397,"col":3},"endLoc":{"line":398,"col":2},"count":1,"ignored":0}],"branches":[{"startLoc":{"line":393,"col":9},"endLoc":{"line":393,"col":35},"trueCount":64,"falseCount":14,"group":[],"ignored":0}],"ignored":0,"index":13},{"name":"findEnding","count":5,"regions":[{"startLoc":{"line":400,"col":1},"endLoc":{"line":407,"col":2},"count":5,"ignored":0},{"startLoc":{"line":401,"col":3},"endLoc":{"line":405,"col":4},"count":13,"ignored":0},{"startLoc":{"line":402,"col":31},"endLoc":{"line":404,"col":6},"count":5,"ignored":0},{"startLoc":{"line":406,"col":3},"endLoc":{"line":407,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":402,"col":9},"endLoc":{"line":402,"col":29},"trueCount":5,"falseCount":8,"group":[],"ignored":0}],"ignored":0,"index":14},{"name":"eventsOfScene","count":0,"regions":[{"startLoc":{"line":409,"col":1},"endLoc":{"line":417,"col":2},"count":0,"ignored":0},{"startLoc":{"line":411,"col":3},"endLoc":{"line":415,"col":4},"count":0,"ignored":0},{"startLoc":{"line":412,"col":40},"endLoc":{"line":414,"col":6},"count":0,"ignored":0},{"startLoc":{"line":416,"col":3},"endLoc":{"line":417,"col":2},"count":0,"ignored":0}],"branches":[{"startLoc":{"line":412,"col":9},"endLoc":{"line":412,"col":38},"trueCount":0,"falseCount":0,"group":[],"ignored":0}],"ignored":0,"index":15},{"name":"clueTitle","count":7,"regions":[{"startLoc":{"line":419,"col":1},"endLoc":{"line":422,"col":2},"count":7,"ignored":0},{"startLoc":{"line":420,"col":3},"endLoc":{"line":422,"col":2},"count":7,"ignored":0}],"branches":[{"startLoc":{"line":421,"col":10},"endLoc":{"line":421,"col":41},"trueCount":0,"falseCount":7,"group":[],"ignored":0}],"ignored":0,"index":16},{"name":"hasClue","count":0,"regions":[{"startLoc":{"line":424,"col":1},"endLoc":{"line":426,"col":2},"count":0,"ignored":0},{"startLoc":{"line":425,"col":3},"endLoc":{"line":426,"col":2},"count":0,"ignored":0}],"branches":[],"ignored":0,"index":17}],"exeLine":{"0":10,"1":11,"2":12,"3":16,"4":17,"5":20,"6":21,"7":24,"8":25,"9":28,"10":29,"11":32,"12":33,"13":36,"14":37,"15":40,"16":41,"17":42,"18":43,"19":44,"20":48,"21":49,"22":50,"23":51,"24":52,"25":53,"26":54,"27":58,"28":59,"29":60,"30":61,"31":62,"32":63,"33":67,"34":68,"35":69,"36":70,"37":71,"38":72,"39":73,"40":74,"41":80,"42":81,"43":82,"44":83,"45":84,"46":86,"47":87,"48":88,"49":89,"50":91,"51":92,"52":93,"53":94,"54":100,"55":101,"56":102,"57":103,"58":104,"59":106,"60":107,"61":108,"62":109,"63":111,"64":112,"65":113,"66":114,"67":116,"68":117,"69":118,"70":119,"71":121,"72":122,"73":123,"74":124,"75":126,"76":127,"77":128,"78":129,"79":131,"80":132,"81":133,"82":134,"83":136,"84":137,"85":138,"86":139,"87":141,"88":142,"89":143,"90":144,"91":150,"92":152,"93":153,"94":154,"95":155,"96":156,"97":157,"98":158,"99":159,"100":160,"101":163,"102":164,"103":165,"104":166,"105":167,"106":168,"107":169,"108":170,"109":171,"110":172,"111":173,"112":175,"113":176,"114":177,"115":178,"116":179,"117":180,"118":181,"119":182,"120":183,"121":184,"122":185,"123":187,"124":188,"125":189,"126":190,"127":191,"128":192,"129":193,"130":194,"131":195,"132":196,"133":197,"134":198,"135":200,"136":201,"137":202,"138":203,"139":204,"140":205,"141":206,"142":207,"143":208,"144":209,"145":210,"146":211,"147":212,"148":213,"149":214,"150":215,"151":216,"152":217,"153":220,"154":221,"155":222,"156":223,"157":224,"158":225,"159":226,"160":227,"161":228,"162":229,"163":230,"164":232,"165":233,"166":234,"167":235,"168":236,"169":237,"170":238,"171":239,"172":240,"173":241,"174":242,"175":244,"176":245,"177":246,"178":247,"179":248,"180":249,"181":250,"182":251,"183":252,"184":253,"185":254,"186":255,"187":256,"188":257,"189":258,"190":259,"191":260,"192":261,"193":263,"194":264,"195":265,"196":266,"197":267,"198":268,"199":269,"200":270,"201":271,"202":272,"203":273,"204":276,"205":277,"206":278,"207":279,"208":280,"209":281,"210":282,"211":283,"212":284,"213":285,"214":286,"215":288,"216":289,"217":290,"218":291,"219":292,"220":293,"221":294,"222":295,"223":296,"224":297,"225":298,"226":300,"227":301,"228":302,"229":303,"230":304,"231":305,"232":306,"233":307,"234":308,"235":309,"236":310,"237":312,"238":313,"239":314,"240":315,"241":316,"242":317,"243":318,"244":319,"245":320,"246":321,"247":322,"248":324,"249":325,"250":326,"251":327,"252":328,"253":329,"254":330,"255":331,"256":332,"257":333,"258":334,"259":339,"260":340,"261":341,"262":342,"263":343,"264":345,"265":346,"266":347,"267":348,"268":350,"269":351,"270":352,"271":353,"272":355,"273":356,"274":357,"275":358,"276":364,"277":365,"278":366,"279":367,"280":370,"281":373,"282":374,"283":375,"284":376,"285":379,"286":382,"287":383,"288":384,"289":385,"290":388,"291":391,"292":392,"293":393,"294":394,"295":397,"296":400,"297":401,"298":402,"299":403,"300":406,"301":409,"302":410,"303":411,"304":412,"305":413,"306":416,"307":419,"308":420,"309":421,"310":424,"311":425},"summary":{"lines":{"total":74,"covered":56,"pct":75.68,"executedLineCount":[-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,56,56,-1,-1,17,17,-1,-1,27,27,-1,-1,11,11,-1,-1,1,1,-1,-1,0,0,-1,-1,23,23,23,23,23,-1,-1,-1,7,7,7,7,7,7,7,-1,-1,-1,1,1,1,1,1,1,-1,-1,-1,13,13,13,13,13,13,13,13,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0,0,0,0,-1,-1,0,-1,-1,7,41,41,7,-1,-1,0,-1,-1,73,438,438,73,-1,-1,0,-1,-1,65,78,78,64,-1,-1,1,-1,-1,5,13,13,5,-1,-1,0,-1,-1,0,0,0,0,0,-1,-1,0,-1,-1,7,7,7,-1,-1,0,0,-1,-1]},"functions":{"total":18,"covered":14,"pct":77.78},"branches":{"total":14,"covered":9,"pct":64.29}}},"title":"CaseCatalog.ets.html","relativeHome":"../index.html"};
+    }
+  };
+
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+
+  window.onload = function () {
+    prettyPrint();
+  }
+</script>
+
+<style scoped>
+  table.coverage {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 0 0;
+    padding: 0;
+  }
+
+  table.coverage td {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+  }
+
+  table.coverage td.line-count {
+    width: 12%;
+    text-align: right;
+    padding: 0 5px 0 20px;
+  }
+
+  table.coverage td.line-coverage {
+    text-align: right;
+    padding-right: 10px;
+    min-width: 20px;
+  }
+
+  table.coverage td span.cline-any {
+    display: inline-block;
+    padding: 0 5px;
+    width: 100%;
+    height: 18px;
+  }
+
+  .low,
+  .cline-no {
+    background: #FCE1E5
+  }
+
+  .high,
+  .cline-yes {
+    background: rgb(230, 245, 208)
+  }
+
+  span.cline-neutral {
+    background: #eaeaea;
+  }
+
+  pre.prettyprint {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .el-main {
+    box-sizing: border-box;
+    display: block;
+    flex: 1;
+    flex-basis: auto;
+    overflow: auto;
+    padding: var(--el-main-padding)
+  }
+
+  .el-container {
+    min-height: 100vh;
+    height: 100%;
+  }
+
+  .footer {
+    font-size: small;
+  }
+
+  .el-row {
+    margin-bottom: 20px;
+  }
+
+  .el-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .el-col {
+    border-radius: 4px;
+  }
+
+  .green {
+    color: var(--el-color-success);
+  }
+
+  .red {
+    color: var(--el-color-error);
+  }
+
+  .linenums li {
+    height: 18px;
+    line-height: 18px;
+  }
+
+  li.L0,
+  li.L1,
+  li.L2,
+  li.L3,
+  li.L5,
+  li.L6,
+  li.L7,
+  li.L8 {
+    list-style-type: decimal
+  }
+
+  .el-col-5 {
+    max-width: 100%;
+  }
+
+  .el-col-3 {
+    max-width: 100%;
+  }
+
+</style>
+
+</html>
